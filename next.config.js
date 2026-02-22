@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "/",
+  // Remove output:"export" for Vercel - they handle Next.js natively
   images: {
     unoptimized: true,
     remotePatterns: [
