@@ -27,7 +27,7 @@ const SAPTechnicalModules = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             {displayCourses.map((course) => (
               <div key={course.id} className="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div className="group shadow-two hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative flex h-full flex-col overflow-hidden rounded-xs bg-white duration-300">
+                <div className="group border-stroke shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark relative flex h-full flex-col overflow-hidden rounded-sm border bg-white duration-300">
                   <Link
                     href={`/sap-technical/${course.id}`}
                     className="relative block aspect-[37/22] w-full flex-shrink-0"

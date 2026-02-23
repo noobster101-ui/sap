@@ -225,7 +225,7 @@ export default function CourseDetailPage() {
             {/* Sidebar */}
             <div className="w-full px-4 lg:w-4/12">
               {/* Popular Category */}
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+              <div className="border-stroke shadow-three dark:border-dark-3 dark:bg-dark mb-10 rounded-sm border bg-white dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Course Categories
                 </h3>
@@ -250,7 +250,7 @@ export default function CourseDetailPage() {
               </div>
 
               {/* Popular Tags */}
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
+              <div className="border-stroke shadow-three dark:border-dark-3 dark:bg-dark mb-10 rounded-sm border bg-white dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Popular Tags
                 </h3>
@@ -272,7 +272,7 @@ export default function CourseDetailPage() {
               </div>
 
               {/* Contact CTA */}
-              <div className="shadow-three dark:bg-gray-dark rounded-xs bg-white p-8 dark:shadow-none">
+              <div className="border-stroke shadow-three dark:border-dark-3 dark:bg-dark rounded-sm border bg-white p-8 dark:shadow-none">
                 <h3 className="mb-4 text-lg font-semibold text-black dark:text-white">
                   Have Questions?
                 </h3>

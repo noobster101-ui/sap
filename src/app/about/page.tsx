@@ -244,7 +244,7 @@ export default function AboutPage() {
       {/* Disclaimer Section */}
       <section className="dark:bg-gray-dark bg-white py-12">
         <div className="container">
-          <div className="dark:bg-dark-2 mx-auto max-w-3xl rounded-lg bg-yellow-50 p-6">
+          <div className="mx-auto max-w-3xl rounded-lg bg-yellow-50 p-6">
             <h3 className="mb-4 text-lg font-bold text-yellow-800">
               Disclaimer
             </h3>

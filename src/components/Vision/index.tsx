@@ -20,7 +20,7 @@ const VisionSection = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400">
                   <svg
                     className="h-8 w-8"
                     fill="none"
@@ -35,10 +35,10 @@ const VisionSection = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+                <h3 className="mb-4 text-center text-xl font-bold text-black dark:text-white">
                   Our Vision
                 </h3>
-                <p className="text-base text-gray-600 dark:text-gray-300">
+                <p className="text-center text-base text-gray-600 dark:text-gray-300">
                   To be the leading SAP training provider, helping individuals
                   achieve their career and life dreams through quality education
                   and practical training.
@@ -47,7 +47,7 @@ const VisionSection = () => {
             </div>
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-400">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-400">
                   <svg
                     className="h-8 w-8"
                     fill="none"
@@ -62,10 +62,10 @@ const VisionSection = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+                <h3 className="mb-4 text-center text-xl font-bold text-black dark:text-white">
                   Our Mission
                 </h3>
-                <p className="text-base text-gray-600 dark:text-gray-300">
+                <p className="text-center text-base text-gray-600 dark:text-gray-300">
                   To provide excellent education, training, and resources so
                   that our students will thrive in today's competitive world
                   with flexible program options and expert instructors.
@@ -74,7 +74,7 @@ const VisionSection = () => {
             </div>
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-400">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-400">
                   <svg
                     className="h-8 w-8"
                     fill="none"
@@ -89,7 +89,7 @@ const VisionSection = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
+                <h3 className="mb-4 text-center text-xl font-bold text-black dark:text-white">
                   What We Offer
                 </h3>
                 <ul className="space-y-2 text-base text-gray-600 dark:text-gray-300">

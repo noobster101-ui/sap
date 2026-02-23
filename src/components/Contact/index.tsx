@@ -1,10 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import NewsLatterBox from "./NewsLatterBox";
-
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -130,16 +126,13 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
-          </div>
         </div>
       </div>
 
       {/* Success Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="dark:bg-dark-2 relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl">
+          <div className="dark:bg-dark relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl">
             <button
               onClick={closeModal}
               className="hover:text-dark absolute top-4 right-4 text-gray-400 dark:hover:text-white"

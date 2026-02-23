@@ -55,7 +55,7 @@ export default function ContactPage() {
             {/* Left Column - Contact Info & Map */}
             <div className="mb-6 w-full px-4 lg:w-1/2">
               {/* Contact Info Card */}
-              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark-2 mb-8 w-full rounded-sm border bg-white p-8">
+              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark mb-8 w-full rounded-sm border bg-white p-8">
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Get In Touch
                 </h2>
@@ -198,7 +198,7 @@ export default function ContactPage() {
             </div>
             {/* Right Column - Contact Form */}
             <div className="mb-6 w-full px-4 lg:w-1/2">
-              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark-2 rounded-sm border bg-white p-8">
+              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark rounded-sm border bg-white p-8">
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Send us a Message
                 </h2>
@@ -290,7 +290,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="w-full px-4">
-              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark-2 w-full rounded-sm border bg-white p-6">
+              <div className="border-stroke shadow-two dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-white p-6">
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Our Location
                 </h2>
