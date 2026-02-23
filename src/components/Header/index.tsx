@@ -58,8 +58,9 @@ const Header = () => {
                 <Image
                   src="/images/brands/logo.png"
                   alt="logo"
-                  width={150}
-                  height={40}
+                  width={250}
+                  height={100}
+                  className="rounded"
                 />
               </Link>
             </div>

@@ -10,11 +10,32 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-4/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
+                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                  About Us
+                </h2>
                 <p className="text-body-color dark:text-body-color-dark mb-9 text-base leading-relaxed">
                   Expert SAP Training with 13+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI.
                 </p>
+                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                  Connect with us
+                </h2>
                 <div className="flex items-center">
+                  <a
+                    href="https://www.facebook.com/p/SAP-Murthy-Training-100065375263630/"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
+                  >
+                    <svg
+                      className="h-6 w-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </a>
                   <a
                     href="https://wa.me/919686762136"
                     aria-label="WhatsApp"
@@ -220,6 +241,34 @@ const Footer = () => {
                     </svg>
                     <span className="text-body-color dark:text-body-color-dark text-base">
                       murthysaptraining@gmail.com
+                    </span>
+                  </li>
+                  <li className="mb-4 flex items-start">
+                    <svg
+                      className="text-primary mt-1 mr-3 h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <span className="text-body-color dark:text-body-color-dark text-base">
+                      Opp. Smart Point, Phase-1, MCECHS Layout,
+                      <br />
+                      Dr.Shivaram Karanth Nagar, RK Hegde Nagar,
+                      <br />
+                      Bengaluru, Karnataka 560077
                     </span>
                   </li>
                 </ul>

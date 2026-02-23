@@ -15,14 +15,19 @@ export default function CourseDetailPage() {
   const allCourses = [...sapFunctionalCourses, ...sapTechnicalCourses];
   const course = allCourses.find((c) => c.id === courseId);
 
+  // Determine if course is functional or technical by checking the arrays directly
+  const isFunctional = sapFunctionalCourses.some((c) => c.id === courseId);
+  const courseCategory = isFunctional ? "Functional" : "Technical";
+  const backLink = isFunctional ? "/sap-functional" : "/sap-technical";
+
   // Get related courses (same category)
   const relatedCourses = allCourses
     .filter(
       (c) =>
         c.id !== courseId &&
-        (course?.id.startsWith("sap-f")
-          ? c.id.startsWith("sap-f")
-          : c.id.startsWith("sap-t")),
+        (isFunctional
+          ? sapFunctionalCourses.some((fc) => fc.id === c.id)
+          : sapTechnicalCourses.some((tc) => tc.id === c.id)),
     )
     .slice(0, 3);
 
@@ -195,11 +200,7 @@ export default function CourseDetailPage() {
                 {/* Back to Courses */}
                 <div className="mt-8">
                   <Link
-                    href={
-                      course.id.startsWith("sap-f")
-                        ? "/sap-functional"
-                        : "/sap-technical"
-                    }
+                    href={backLink}
                     className="text-primary inline-flex items-center hover:underline"
                   >
                     <svg
@@ -215,9 +216,7 @@ export default function CourseDetailPage() {
                         d="M15 19l-7-7 7-7"
                       />
                     </svg>
-                    Back to{" "}
-                    {course.id.startsWith("sap-f") ? "Functional" : "Technical"}{" "}
-                    Courses
+                    Back to {courseCategory} Courses
                   </Link>
                 </div>
               </div>
