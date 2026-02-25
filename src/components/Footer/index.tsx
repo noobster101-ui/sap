@@ -13,7 +13,7 @@ const Footer = () => {
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   About Us
                 </h2>
-                <p className="text-body-color dark:text-body-color-dark mb-9 text-base leading-relaxed">
+                <p className="dark:text-body-color-dark text-body-color mb-9 text-base leading-relaxed">
                   Expert SAP Training with 13+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI.
                 </p>
@@ -117,18 +117,18 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/sap-functional"
+                      href="/sap-ecc"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      SAP Functional
+                      SAP ECC
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/sap-technical"
+                      href="/sap-s4hana"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      SAP Technical
+                      SAP S/4 HANA
                     </Link>
                   </li>
                   <li>
@@ -151,15 +151,15 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/sap-functional/sap-s4-hana-sourcing-procurement"
+                      href="/sap-ecc/sap-sd-sales-distribution"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      SAP S/4 HANA Sourcing
+                      SAP SD
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/sap-functional/sap-mm-material-management"
+                      href="/sap-ecc/sap-mm-material-management"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       SAP MM
@@ -167,15 +167,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/sap-functional/sap-s4-hana-sales"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
-                    >
-                      SAP S/4 HANA Sales
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/sap-functional/sap-fico"
+                      href="/sap-ecc/sap-fico"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
                       SAP FICO
@@ -183,18 +175,26 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/sap-technical/sap-abap"
+                      href="/sap-s4hana/sap-s4-hana-sales"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      SAP ABAP
+                      S/4 HANA Sales
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/sap-technical/sap-ui5-fiori"
+                      href="/sap-s4hana/sap-s4-hana-sourcing-procurement"
                       className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
                     >
-                      SAP UI5 & FIORI
+                      S/4 HANA Procurement
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/sap-s4hana/sap-abap-on-hana"
+                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                    >
+                      SAP ABAP on HANA
                     </Link>
                   </li>
                 </ul>
@@ -283,16 +283,18 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-body-color text-center text-base dark:text-white">
-              © {new Date().getFullYear()} Murthy SAP Training. All rights
-              reserved.
-            </p>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+            <div className="py-8">
+              <p className="text-body-color text-center text-base dark:text-white">
+                © {new Date().getFullYear()} Murthy SAP Training. All rights
+                reserved.
+              </p>
+            </div>
           </div>
         </div>
+
+        {/* Decorative Elements */}
         <div className="absolute top-14 right-0 z-[-1]">
           <svg
             width="55"
