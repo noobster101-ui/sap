@@ -84,7 +84,7 @@ const Header = () => {
                         <>
                           <button
                             onClick={() => setDropdownOpen(!dropdownOpen)}
-                            className="text-dark hover:text-primary flex items-center py-6 text-base font-semibold dark:text-white dark:hover:text-white"
+                            className="text-body-color hover:text-primary flex items-center py-6 text-base font-semibold dark:text-white dark:hover:text-white"
                           >
                             {menuItem.title}
                             <svg
@@ -114,7 +114,7 @@ const Header = () => {
                               <li key={subIndex}>
                                 <Link
                                   href={subItem.path || "#"}
-                                  className="text-dark hover:bg-primary dark:hover:bg-primary block px-4 py-2 text-base font-semibold hover:text-white dark:text-white"
+                                  className="text-body-color hover:bg-primary dark:hover:bg-primary block px-4 py-2 text-base font-semibold hover:text-white dark:text-white"
                                 >
                                   {subItem.title}
                                 </Link>
@@ -128,7 +128,7 @@ const Header = () => {
                           className={`flex items-center py-6 text-base font-semibold ${
                             usePathName === menuItem.path
                               ? "text-primary"
-                              : "text-dark hover:text-primary dark:text-white dark:hover:text-white"
+                              : "text-body-color hover:text-primary dark:text-white dark:hover:text-white"
                           }`}
                         >
                           {menuItem.title}
@@ -178,7 +178,7 @@ const Header = () => {
                   <li key={index}>
                     {menuItem.submenu ? (
                       <div>
-                        <span className="text-dark block py-2 text-base font-semibold dark:text-white">
+                        <span className="text-body-color block py-2 text-base font-semibold dark:text-white">
                           {menuItem.title}
                         </span>
                         <ul className="border-primary ml-4 space-y-2 border-l-2 pl-4">
@@ -187,7 +187,7 @@ const Header = () => {
                               <Link
                                 href={subItem.path || "#"}
                                 onClick={() => setNavbarOpen(false)}
-                                className="text-dark hover:text-primary block py-1 text-base dark:text-white"
+                                className="text-body-color hover:text-primary block py-1 text-base dark:text-white"
                               >
                                 {subItem.title}
                               </Link>
@@ -202,7 +202,7 @@ const Header = () => {
                         className={`block py-2 text-base font-semibold ${
                           usePathName === menuItem.path
                             ? "text-primary"
-                            : "text-dark hover:text-primary dark:text-white"
+                            : "text-body-color hover:text-primary dark:text-white"
                         }`}
                       >
                         {menuItem.title}

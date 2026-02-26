@@ -69,7 +69,7 @@ const SAPECCModules = () => {
                           </div>
                         </div> */}
                         <div className="w-full">
-                          <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
+                          <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
                             By {course.author.name}
                           </h4>
                           <p className="dark:text-black-dark text-xs text-black">
@@ -78,7 +78,7 @@ const SAPECCModules = () => {
                         </div>
                       </div>
                       <div className="inline-block">
-                        <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
+                        <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
                           Date
                         </h4>
                         <p className="dark:text-black-dark text-xs text-black">

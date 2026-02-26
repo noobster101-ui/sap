@@ -45,7 +45,7 @@ const Contact = () => {
               <span className="text-primary mb-4 block text-sm font-semibold">
                 Contact Us
               </span>
-              <h2 className="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] dark:text-white">
+              <h2 className="text-body-color mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] dark:text-white">
                 Have Questions? Get in Touch
               </h2>
               <p className="dark:text-black-dark mb-10 text-base leading-relaxed text-black">
@@ -60,7 +60,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="name"
-                        className="text-dark mb-3 block text-sm font-semibold dark:text-white"
+                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
                       >
                         Your Name
                       </label>
@@ -79,7 +79,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="email"
-                        className="text-dark mb-3 block text-sm font-semibold dark:text-white"
+                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
                       >
                         Your Email
                       </label>
@@ -98,7 +98,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="message"
-                        className="text-dark mb-3 block text-sm font-semibold dark:text-white"
+                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
                       >
                         Your Message
                       </label>
@@ -135,7 +135,7 @@ const Contact = () => {
           <div className="dark:bg-dark relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl">
             <button
               onClick={closeModal}
-              className="hover:text-dark absolute top-4 right-4 text-gray-400 dark:hover:text-white"
+              className="hover:text-body-color absolute top-4 right-4 text-gray-400 dark:hover:text-white"
             >
               <svg
                 className="h-6 w-6"
@@ -167,7 +167,7 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-dark mb-2 text-2xl font-bold dark:text-white">
+              <h3 className="text-body-color mb-2 text-2xl font-bold dark:text-white">
                 Message Sent!
               </h3>
               <p className="dark:text-black-dark mb-6 text-black">
