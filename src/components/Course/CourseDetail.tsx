@@ -229,7 +229,7 @@ export default function CourseDetailPage() {
                   <li>
                     <Link
                       href="/sap-ecc"
-                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white
+                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white"
                     >
                       SAP ECC ({sapFunctionalCourses.length})
                     </Link>
@@ -237,7 +237,7 @@ export default function CourseDetailPage() {
                   <li>
                     <Link
                       href="/sap-s4hana"
-                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white
+                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white"
                     >
                       SAP S/4HANA ({sapTechnicalCourses.length})
                     </Link>
