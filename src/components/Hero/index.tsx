@@ -20,7 +20,7 @@ const Hero = () => {
                   Success is nothing more than a few simple disciplines,
                   practiced everyday.
                 </p>
-                <p className="text-body-color dark:text-body-color-dark mb-12 text-base leading-relaxed sm:text-lg md:text-xl">
+                <p className="dark:text-black-dark mb-12 text-base leading-relaxed text-black sm:text-lg md:text-xl">
                   Expert SAP Training with 13+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI from
                   seasoned professionals who have worked at top companies like
@@ -28,7 +28,7 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <Link
-                    href="/sap-functional"
+                    href="/sap-ecc"
                     className="bg-primary hover:bg-primary/80 rounded-xs px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
                   >
                     Explore Courses
@@ -40,7 +40,7 @@ const Hero = () => {
                     Contact Us
                   </Link>
                 </div>
-                <div className="text-body-color dark:text-body-color-dark mt-8 flex items-center justify-center space-x-4 text-base">
+                <div className="dark:text-black-dark mt-8 flex items-center justify-center space-x-4 text-base text-black">
                   <span>📱 +91 9686762136</span>
                   <span>📧 murthysaptraining@gmail.com</span>
                 </div>

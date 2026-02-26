@@ -15,18 +15,25 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "SAP Functional",
-    path: "/sap-functional",
+    title: "Courses",
     newTab: false,
+    submenu: [
+      {
+        id: 31,
+        title: "SAP ECC",
+        path: "/sap-ecc",
+        newTab: false,
+      },
+      {
+        id: 32,
+        title: "SAP S/4 HANA",
+        path: "/sap-s4hana",
+        newTab: false,
+      },
+    ],
   },
   {
     id: 4,
-    title: "SAP Technical",
-    path: "/sap-technical",
-    newTab: false,
-  },
-  {
-    id: 5,
     title: "Contact",
     path: "/contact",
     newTab: false,

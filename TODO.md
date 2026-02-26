@@ -1,24 +1,33 @@
-# TODO: Multiple Updates
+# SAP Courses Restructuring TODO
 
-## Task 1: Add Testimonials to Home Page
+## Phase 1: Data Layer ✅
 
-- [ ] Import and add Testimonials component after VisionSection in page.tsx
+- [x] Update `src/data/courses.ts`
+  - Added `division: 'ECC' | 'S/4HANA'` field to SAPCourse interface
+  - Added `brochure?: string` field for optional PDF link
+  - Updated existing courses with division and brochure
+  - Added all new ECC courses (Logistics, WM, EWM)
+  - Added all new S/4 HANA courses (Finance, WM, TM, ABAP on HANA, EWM, HANA)
 
-## Task 2: Update SAPFunctionalModules like SAPTechnicalModules
+## Phase 2: Components ✅
 
-- [ ] Make cards consistent height with proper styling
-- [ ] Match the visual design of SAPTechnicalModules
+- [x] Created `src/components/SAP/SAPECCModules.tsx` - Home page ECC section
+- [x] Created `src/components/SAP/SAPS4HANAModules.tsx` - Home page S/4 HANA section
 
-## Task 3: Update SAP Images
+## Phase 3: Pages ✅
 
-- [ ] Check and use images from public/images/sap folder
-- [ ] Update course detail pages to show actual images
+- [x] Created `src/app/sap-ecc/page.tsx` - New ECC courses page
+- [x] Created `src/app/sap-s4hana/page.tsx` - New S/4 HANA courses page
+- [x] Created `src/app/sap-ecc/[courseId]/page.tsx` - ECC course detail with conditional brochure
+- [x] Created `src/app/sap-s4hana/[courseId]/page.tsx` - S/4 HANA course detail with conditional brochure
+- [x] Updated home page components to link correctly
 
-## Task 4: Replace titles with SectionTitle component
+## Phase 4: Navigation ✅
 
-- [ ] Use SectionTitle in SAP pages
+- [x] Updated `src/components/Header/menuData.tsx`
+  - Removed SAP Functional and SAP Technical
+  - Added Courses dropdown with ECC and S/4 HANA options
 
-## Task 5: Add Floating WhatsApp Button
+## Phase 5: Build Verification ✅
 
-- [ ] Create floating WhatsApp button widget
-- [ ] Position on right corner of all pages
+- [x] Build successful with all new routes

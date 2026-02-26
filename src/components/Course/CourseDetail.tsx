@@ -15,21 +15,17 @@ export default function CourseDetailPage() {
   const allCourses = [...sapFunctionalCourses, ...sapTechnicalCourses];
   const course = allCourses.find((c) => c.id === courseId);
 
-  // Determine if course is functional or technical by checking the arrays directly
-  const isFunctional = sapFunctionalCourses.some((c) => c.id === courseId);
-  const courseCategory = isFunctional ? "Functional" : "Technical";
-  const backLink = isFunctional ? "/sap-functional" : "/sap-technical";
+  // Determine if course is ECC or S/4HANA by checking the division
+  const isECC = course?.division === "ECC";
+  const backLink = isECC ? "/sap-ecc" : "/sap-s4hana";
 
-  // Get related courses (same category)
+  // Get related courses (same division)
   const relatedCourses = allCourses
-    .filter(
-      (c) =>
-        c.id !== courseId &&
-        (isFunctional
-          ? sapFunctionalCourses.some((fc) => fc.id === c.id)
-          : sapTechnicalCourses.some((tc) => tc.id === c.id)),
-    )
+    .filter((c) => c.id !== courseId && c.division === course?.division)
     .slice(0, 3);
+
+  // Determine category display text
+  const courseCategory = isECC ? "ECC" : "S/4HANA";
 
   if (!course) {
     return (
@@ -68,7 +64,7 @@ export default function CourseDetailPage() {
                 <div className="border-body-color/10 mb-10 flex flex-wrap items-center justify-between border-b pb-4 dark:border-white/10">
                   <div className="flex flex-wrap items-center">
                     <div className="mr-10 mb-5 flex items-center">
-                      <div className="mr-4">
+                      {/* <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
                             src={course.author.image}
@@ -77,15 +73,15 @@ export default function CourseDetailPage() {
                             className="object-cover"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="w-full">
-                        <span className="text-body-color dark:text-body-color-dark mb-1 text-base font-medium">
+                        <span className="dark:text-black-dark mb-1 text-base font-medium text-black">
                           By <span> {course.author.name}</span>
                         </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
-                      <p className="text-body-color dark:text-body-color-dark mr-5 flex items-center text-base font-medium">
+                      <p className="dark:text-black-dark mr-5 flex items-center text-base font-medium text-black">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -134,7 +130,7 @@ export default function CourseDetailPage() {
 
                 {/* Course Description */}
                 <div className="mb-10">
-                  <p className="text-body-color dark:text-body-color-dark mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="dark:text-black-dark mb-10 text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {course.fullDescription}
                   </p>
                 </div>
@@ -143,11 +139,11 @@ export default function CourseDetailPage() {
                 <h3 className="font-xl mb-6 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
                   Course Curriculum
                 </h3>
-                <ul className="text-body-color dark:text-body-color-dark mb-10 list-inside list-disc">
+                <ul className="dark:text-black-dark mb-10 list-inside list-disc text-black">
                   {course.levels.map((level, index) => (
                     <li
                       key={index}
-                      className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg"
+                      className="dark:text-black-dark mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
                     >
                       {level}
                     </li>
@@ -158,11 +154,11 @@ export default function CourseDetailPage() {
                 <h3 className="font-xl mb-6 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
                   What You'll Learn
                 </h3>
-                <ul className="text-body-color dark:text-body-color-dark mb-10 list-inside list-disc">
+                <ul className="dark:text-black-dark mb-10 list-inside list-disc text-black">
                   {course.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="text-body-color dark:text-body-color-dark mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg"
+                      className="dark:text-black-dark mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
                     >
                       {feature}
                     </li>
@@ -175,7 +171,7 @@ export default function CourseDetailPage() {
                     <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
                       Interested in this course?
                     </h3>
-                    <p className="text-body-color dark:text-body-color-dark mb-6">
+                    <p className="dark:text-black-dark mb-6 text-black">
                       Download the course brochure for detailed information
                     </p>
                     <button className="bg-primary hover:bg-primary/90 inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white">
@@ -232,18 +228,18 @@ export default function CourseDetailPage() {
                 <ul className="px-8 py-6">
                   <li>
                     <Link
-                      href="/sap-functional"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-3 inline-block text-base font-medium"
+                      href="/sap-ecc"
+                      className="hover:text-primary dark:text-black-dark dark:hover:text-primary mb-3 inline-block text-base font-medium text-black"
                     >
-                      SAP Functional ({sapFunctionalCourses.length})
+                      SAP ECC ({sapFunctionalCourses.length})
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/sap-technical"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-3 inline-block text-base font-medium"
+                      href="/sap-s4hana"
+                      className="hover:text-primary dark:text-black-dark dark:hover:text-primary mb-3 inline-block text-base font-medium text-black"
                     >
-                      SAP Technical ({sapTechnicalCourses.length})
+                      SAP S/4HANA ({sapTechnicalCourses.length})
                     </Link>
                   </li>
                 </ul>
@@ -263,7 +259,7 @@ export default function CourseDetailPage() {
                   ].map((tag, index) => (
                     <span
                       key={index}
-                      className="text-body-color dark:text-body-color-dark mr-2 mb-2 inline-block rounded-full bg-gray-100 px-4 py-2 text-sm font-medium dark:bg-gray-800"
+                      className="dark:text-black-dark mr-2 mb-2 inline-block rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-black dark:bg-gray-800"
                     >
                       {tag}
                     </span>
@@ -276,7 +272,7 @@ export default function CourseDetailPage() {
                 <h3 className="mb-4 text-lg font-semibold text-black dark:text-white">
                   Have Questions?
                 </h3>
-                <p className="text-body-color dark:text-body-color-dark mb-4">
+                <p className="dark:text-black-dark mb-4 text-black">
                   Contact us for more information about this course.
                 </p>
                 <Link

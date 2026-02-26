@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
+    <section className="py-16 md:py-20 lg:py-20">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
@@ -30,7 +30,7 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   Bug free code
                 </h3>
-                <p className="text-body-color text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                <p className="text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -39,7 +39,7 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   Premier support
                 </h3>
-                <p className="text-body-color text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                <p className="text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt.
                 </p>
@@ -48,7 +48,7 @@ const AboutSectionTwo = () => {
                 <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                   Next.js
                 </h3>
-                <p className="text-body-color text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed">
+                <p className="text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed">
                   Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
                   consectetur adipiscing elit setim.
                 </p>

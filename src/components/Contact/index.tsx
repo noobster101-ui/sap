@@ -48,7 +48,7 @@ const Contact = () => {
               <h2 className="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] dark:text-white">
                 Have Questions? Get in Touch
               </h2>
-              <p className="text-body-color dark:text-body-color-dark mb-10 text-base leading-relaxed">
+              <p className="dark:text-black-dark mb-10 text-base leading-relaxed text-black">
                 Feel free to contact us if you need any assistance, any help or
                 answer your questions. We have expert team will give you a reply
                 as soon as possible.
@@ -71,7 +71,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Enter your name"
                         required
-                        className="border-stroke text-body-color focus:border-primary dark:border-dark-3 w-full rounded-sm border bg-transparent px-6 py-3 text-base outline-none focus:shadow-none dark:text-white"
+                        className="border-stroke focus:border-primary dark:border-dark-3 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-black outline-none focus:shadow-none dark:text-white"
                       />
                     </div>
                   </div>
@@ -90,7 +90,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Enter your email"
                         required
-                        className="border-stroke text-body-color focus:border-primary dark:border-dark-3 w-full rounded-sm border bg-transparent px-6 py-3 text-base outline-none focus:shadow-none dark:text-white"
+                        className="border-stroke focus:border-primary dark:border-dark-3 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-black outline-none focus:shadow-none dark:text-white"
                       />
                     </div>
                   </div>
@@ -109,7 +109,7 @@ const Contact = () => {
                         rows={5}
                         placeholder="Enter your message"
                         required
-                        className="border-stroke text-body-color focus:border-primary dark:border-dark-3 w-full resize-none rounded-sm border bg-transparent px-6 py-3 text-base outline-none focus:shadow-none dark:text-white"
+                        className="border-stroke focus:border-primary dark:border-dark-3 w-full resize-none rounded-sm border bg-transparent px-6 py-3 text-base text-black outline-none focus:shadow-none dark:text-white"
                       ></textarea>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ const Contact = () => {
               <h3 className="text-dark mb-2 text-2xl font-bold dark:text-white">
                 Message Sent!
               </h3>
-              <p className="text-body-color dark:text-body-color-dark mb-6">
+              <p className="dark:text-black-dark mb-6 text-black">
                 Thank you for contacting us. We'll get back to you soon!
               </p>
               <button

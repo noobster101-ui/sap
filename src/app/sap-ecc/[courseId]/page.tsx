@@ -163,14 +163,14 @@ export default function SAPECCCourseDetailPage({ params }: PageProps) {
                     Instructor
                   </h3>
                   <div className="flex items-center">
-                    <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full">
+                    {/* <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full">
                       <Image
                         src={course.author.image}
                         alt={course.author.name}
                         fill
                         className="object-cover"
                       />
-                    </div>
+                    </div> */}
                     <div>
                       <h4 className="font-semibold text-black dark:text-white">
                         {course.author.name}
