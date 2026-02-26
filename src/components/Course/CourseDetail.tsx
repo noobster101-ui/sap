@@ -75,13 +75,13 @@ export default function CourseDetailPage() {
                         </div>
                       </div> */}
                       <div className="w-full">
-                        <span className="dark:text-black-dark mb-1 text-base font-medium text-black">
+                        <span className="mb-1 text-base font-medium text-black dark:text-white">
                           By <span> {course.author.name}</span>
                         </span>
                       </div>
                     </div>
                     <div className="mb-5 flex items-center">
-                      <p className="dark:text-black-dark mr-5 flex items-center text-base font-medium text-black">
+                      <p className="mr-5 flex items-center text-base font-medium text-black dark:text-white">
                         <span className="mr-3">
                           <svg
                             width="15"
@@ -130,7 +130,7 @@ export default function CourseDetailPage() {
 
                 {/* Course Description */}
                 <div className="mb-10">
-                  <p className="dark:text-black-dark mb-10 text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <p className="mb-10 text-base leading-relaxed font-medium text-black sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     {course.fullDescription}
                   </p>
                 </div>
@@ -139,11 +139,11 @@ export default function CourseDetailPage() {
                 <h3 className="font-xl mb-6 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
                   Course Curriculum
                 </h3>
-                <ul className="dark:text-black-dark mb-10 list-inside list-disc text-black">
+                <ul className="mb-10 list-inside list-disc text-black dark:text-white">
                   {course.levels.map((level, index) => (
                     <li
                       key={index}
-                      className="dark:text-black-dark mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
+                      className="mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
                     >
                       {level}
                     </li>
@@ -154,11 +154,11 @@ export default function CourseDetailPage() {
                 <h3 className="font-xl mb-6 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
                   What You'll Learn
                 </h3>
-                <ul className="dark:text-black-dark mb-10 list-inside list-disc text-black">
+                <ul className="mb-10 list-inside list-disc text-black dark:text-white">
                   {course.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="dark:text-black-dark mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
+                      className="mb-2 text-base font-medium text-black sm:text-lg lg:text-base xl:text-lg"
                     >
                       {feature}
                     </li>
@@ -171,7 +171,7 @@ export default function CourseDetailPage() {
                     <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
                       Interested in this course?
                     </h3>
-                    <p className="dark:text-black-dark mb-6 text-black">
+                    <p className="mb-6 text-black dark:text-white">
                       Download the course brochure for detailed information
                     </p>
                     <button className="bg-primary hover:bg-primary/90 inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white">
@@ -229,7 +229,7 @@ export default function CourseDetailPage() {
                   <li>
                     <Link
                       href="/sap-ecc"
-                      className="hover:text-primary dark:text-black-dark dark:hover:text-primary mb-3 inline-block text-base font-medium text-black"
+                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white
                     >
                       SAP ECC ({sapFunctionalCourses.length})
                     </Link>
@@ -237,7 +237,7 @@ export default function CourseDetailPage() {
                   <li>
                     <Link
                       href="/sap-s4hana"
-                      className="hover:text-primary dark:text-black-dark dark:hover:text-primary mb-3 inline-block text-base font-medium text-black"
+                      className="hover:text-primary dark:hover:text-primary mb-3 inline-block text-base font-medium text-black dark:text-white
                     >
                       SAP S/4HANA ({sapTechnicalCourses.length})
                     </Link>
@@ -259,7 +259,7 @@ export default function CourseDetailPage() {
                   ].map((tag, index) => (
                     <span
                       key={index}
-                      className="dark:text-black-dark mr-2 mb-2 inline-block rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-black dark:bg-gray-800"
+                      className="mr-2 mb-2 inline-block rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-black dark:bg-gray-800"
                     >
                       {tag}
                     </span>
@@ -272,7 +272,7 @@ export default function CourseDetailPage() {
                 <h3 className="mb-4 text-lg font-semibold text-black dark:text-white">
                   Have Questions?
                 </h3>
-                <p className="dark:text-black-dark mb-4 text-black">
+                <p className="mb-4 text-black dark:text-white">
                   Contact us for more information about this course.
                 </p>
                 <Link

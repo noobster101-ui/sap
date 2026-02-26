@@ -20,7 +20,7 @@ const SAPS4HANAModules = () => {
             <h2 className="mb-4 text-3xl font-bold text-black sm:text-4xl md:text-[40px] md:leading-tight dark:text-white">
               SAP S/4 HANA Courses
             </h2>
-            <p className="dark:text-black-dark text-base text-black">
+            <p className="text-base text-black dark:text-white">
               Learn the next-generation S/4 HANA modules with our comprehensive
               training programs
             </p>
@@ -53,7 +53,7 @@ const SAPS4HANAModules = () => {
                         {course.title}
                       </Link>
                     </h3>
-                    <p className="border-body-color/10 dark:text-black-dark mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10">
+                    <p className="border-body-color/10 mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10">
                       {course.shortDescription}
                     </p>
                     <div className="mt-auto flex items-center">
@@ -69,19 +69,19 @@ const SAPS4HANAModules = () => {
                           </div>
                         </div> */}
                         <div className="w-full">
-                          <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
+                          <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                             By {course.author.name}
                           </h4>
-                          <p className="dark:text-black-dark text-xs text-black">
+                          <p className="text-xs text-black dark:text-white">
                             {course.author.designation}
                           </p>
                         </div>
                       </div>
                       <div className="inline-block">
-                        <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
+                        <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                           Date
                         </h4>
-                        <p className="dark:text-black-dark text-xs text-black">
+                        <p className="text-xs text-black dark:text-white">
                           {course.publishDate}
                         </p>
                       </div>

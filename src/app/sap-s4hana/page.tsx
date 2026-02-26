@@ -75,6 +75,7 @@ export default function SAPS4HANAPage() {
                       alt={course.title}
                       fill
                       className="object-cover"
+                      style={{ borderBottom: "1px solid #ddd" }}
                     />
                   </Link>
                   <div className="flex-grow p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
@@ -86,7 +87,7 @@ export default function SAPS4HANAPage() {
                         {course.title}
                       </Link>
                     </h3>
-                    <p className="border-body-color/10 dark:text-black-dark mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10">
+                    <p className="border-body-color/10 mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10">
                       {course.shortDescription}
                     </p>
                     <div className="mt-auto flex items-center">
@@ -102,19 +103,19 @@ export default function SAPS4HANAPage() {
                           </div>
                         </div> */}
                         <div className="w-full">
-                          <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
+                          <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                             By {course.author.name}
                           </h4>
-                          <p className="dark:text-black-dark text-xs text-black">
+                          <p className="text-xs text-black dark:text-white">
                             {course.author.designation}
                           </p>
                         </div>
                       </div>
                       <div className="inline-block">
-                        <h4 className="text-body-color mb-1 text-sm font-medium dark:text-white">
+                        <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                           Date
                         </h4>
-                        <p className="dark:text-black-dark text-xs text-black">
+                        <p className="text-xs text-black dark:text-white">
                           {course.publishDate}
                         </p>
                       </div>

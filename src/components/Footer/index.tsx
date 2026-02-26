@@ -13,7 +13,7 @@ const Footer = () => {
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   About Us
                 </h2>
-                <p className="dark:text-body-color-dark text-body-color mb-9 text-base leading-relaxed">
+                <p className="mb-9 text-base leading-relaxed text-black dark:text-white">
                   Expert SAP Training with 13+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI.
                 </p>
@@ -26,7 +26,7 @@ const Footer = () => {
                     aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
+                    className="hover:text-primary dark:hover:text-primary mr-6 text-black duration-300 dark:text-white"
                   >
                     <svg
                       className="h-6 w-6"
@@ -41,7 +41,7 @@ const Footer = () => {
                     aria-label="WhatsApp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
+                    className="hover:text-primary dark:hover:text-primary mr-6 text-black duration-300 dark:text-white"
                   >
                     <svg
                       className="h-6 w-6"
@@ -54,7 +54,7 @@ const Footer = () => {
                   <a
                     href="mailto:murthysaptraining@gmail.com"
                     aria-label="Email"
-                    className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mr-6 duration-300"
+                    className="hover:text-primary dark:hover:text-primary mr-6 text-black duration-300 dark:text-white"
                   >
                     <svg
                       className="h-6 w-6"
@@ -73,7 +73,7 @@ const Footer = () => {
                   <a
                     href="tel:+919686762136"
                     aria-label="Phone"
-                    className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary duration-300"
+                    className="hover:text-primary dark:hover:text-primary text-black duration-300 dark:text-white"
                   >
                     <svg
                       className="h-6 w-6"
@@ -102,7 +102,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       Home
                     </Link>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/about"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       About Us
                     </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-ecc"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP ECC
                     </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-s4hana"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP S/4 HANA
                     </Link>
@@ -134,7 +134,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       Contact
                     </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-ecc/sap-sd-sales-distribution"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP SD
                     </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-ecc/sap-mm-material-management"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP MM
                     </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-ecc/sap-fico"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP FICO
                     </Link>
@@ -176,7 +176,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-s4hana/sap-s4-hana-sales"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       S/4 HANA Sales
                     </Link>
@@ -184,7 +184,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-s4hana/sap-s4-hana-sourcing-procurement"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       S/4 HANA Procurement
                     </Link>
@@ -192,7 +192,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/sap-s4hana/sap-abap-on-hana"
-                      className="text-body-color hover:text-primary dark:text-body-color-dark dark:hover:text-primary mb-4 inline-block text-base duration-300"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >
                       SAP ABAP on HANA
                     </Link>
@@ -221,7 +221,7 @@ const Footer = () => {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span className="text-body-color dark:text-body-color-dark text-base">
+                    <span className="text-base text-black dark:text-white">
                       +91 9686762136
                     </span>
                   </li>
@@ -239,7 +239,7 @@ const Footer = () => {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span className="text-body-color dark:text-body-color-dark text-base">
+                    <span className="text-base text-black dark:text-white">
                       murthysaptraining@gmail.com
                     </span>
                   </li>
@@ -263,7 +263,7 @@ const Footer = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <span className="text-body-color dark:text-body-color-dark text-base">
+                    <span className="text-base text-black dark:text-white">
                       Opp. Smart Point, Phase-1, MCECHS Layout,
                       <br />
                       Dr.Shivaram Karanth Nagar, RK Hegde Nagar,
@@ -273,7 +273,7 @@ const Footer = () => {
                   </li>
                 </ul>
                 <div className="mt-6">
-                  <p className="text-body-color dark:text-body-color-dark text-sm">
+                  <p className="text-sm text-black dark:text-white">
                     <strong>Note:</strong> My trainings are not affiliated,
                     associated, authorized, endorsed by, or in any way
                     officially connected with SAP organization. SAP is a
@@ -286,7 +286,7 @@ const Footer = () => {
 
             <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
             <div className="py-8">
-              <p className="text-body-color text-center text-base dark:text-white">
+              <p className="text-center text-base text-black dark:text-white">
                 © {new Date().getFullYear()} Murthy SAP Training. All rights
                 reserved.
               </p>

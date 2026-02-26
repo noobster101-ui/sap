@@ -57,7 +57,7 @@ export default function AboutPage() {
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   About Murthy SAP Training
                 </h2>
-                <p className="dark:text-black-dark mb-6 text-base leading-relaxed text-black">
+                <p className="mb-6 text-base leading-relaxed text-black dark:text-white">
                   Ever since opening our doors, we've helped countless
                   individuals achieve their career and life dreams. We are
                   committed to providing excellent education, training and
@@ -66,7 +66,7 @@ export default function AboutPage() {
                   instructors, we're sure you'll be satisfied with your
                   education at Murthy SAP Training.
                 </p>
-                <p className="dark:text-black-dark text-base leading-relaxed text-black">
+                <p className="text-base leading-relaxed text-black dark:text-white">
                   Our mission is to help you reach greater heights in your SAP
                   career with high-quality training focused on real-time
                   business scenarios and the best examples.
@@ -81,7 +81,7 @@ export default function AboutPage() {
                     <h3 className="text-2xl font-bold text-black dark:text-white">
                       13+ Years
                     </h3>
-                    <p className="dark:text-black-dark text-black">
+                    <p className="text-black dark:text-white">
                       Industry Experience
                     </p>
                   </div>
@@ -108,14 +108,14 @@ export default function AboutPage() {
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   About The Trainer
                 </h2>
-                <p className="dark:text-black-dark mb-4 text-base leading-relaxed text-black">
+                <p className="mb-4 text-base leading-relaxed text-black dark:text-white">
                   I am an SAP functional consultant with overall 13 years of
                   experience in SAP. Teaching has been my passion for a long
                   time, and I have been teaching SAP since 2014. I have worked
                   for major companies in India like CTS, Accenture, IBM &
                   Unilever, etc.
                 </p>
-                <p className="dark:text-black-dark mb-6 text-base leading-relaxed text-black">
+                <p className="mb-6 text-base leading-relaxed text-black dark:text-white">
                   I will help you to reach greater heights in your SAP carrier
                   with high-quality training. In this training, I will focus on
                   real-time business scenarios with the best examples.
@@ -139,7 +139,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       A detailed explanation of business processes with
                       real-time examples
                     </span>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       Detailed Study Material
                     </span>
                   </li>
@@ -176,7 +176,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       Project hands-on
                     </span>
                   </li>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       Resume preparation
                     </span>
                   </li>
@@ -212,7 +212,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       Interview preparation
                     </span>
                   </li>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <span className="dark:text-black-dark text-black">
+                    <span className="text-black dark:text-white">
                       Mock interviews
                     </span>
                   </li>

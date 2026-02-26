@@ -62,7 +62,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Course Overview
                 </h2>
-                <div className="dark:text-black-dark mb-8 whitespace-pre-line text-black">
+                <div className="mb-8 whitespace-pre-line text-black dark:text-white">
                   {course.fullDescription}
                 </div>
 
@@ -78,7 +78,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                       <span className="bg-primary mr-4 flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold text-white">
                         {index + 1}
                       </span>
-                      <p className="dark:text-black-dark text-black">{level}</p>
+                      <p className="text-black dark:text-white">{level}</p>
                     </div>
                   ))}
                 </div>
@@ -103,7 +103,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="dark:text-black-dark text-black">
+                      <span className="text-black dark:text-white">
                         {feature}
                       </span>
                     </div>
@@ -116,7 +116,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                     <h3 className="mb-4 text-xl font-bold text-black dark:text-white">
                       Download Course Brochure
                     </h3>
-                    <p className="dark:text-black-dark mb-4 text-black">
+                    <p className="mb-4 text-black dark:text-white">
                       Get detailed information about this course by downloading
                       our brochure.
                     </p>
@@ -154,6 +154,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                       alt={course.title}
                       fill
                       className="object-cover"
+                      style={{ border: "1px solid #ddd" }}
                     />
                   </div>
                 </div>
@@ -175,7 +176,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                       <h4 className="font-semibold text-black dark:text-white">
                         {course.author.name}
                       </h4>
-                      <p className="dark:text-black-dark text-sm text-black">
+                      <p className="text-sm text-black dark:text-white">
                         {course.author.designation}
                       </p>
                     </div>
@@ -202,7 +203,7 @@ export default function SAPS4HANACourseDetailPage({ params }: PageProps) {
                   <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
                     Published Date
                   </h3>
-                  <p className="dark:text-black-dark text-black">
+                  <p className="text-black dark:text-white">
                     {course.publishDate}
                   </p>
                 </div>

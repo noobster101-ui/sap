@@ -25,7 +25,7 @@ const AboutSection = () => {
                   <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                     About Us
                   </h3>
-                  <p className="dark:text-black-dark text-base leading-relaxed text-black">
+                  <p className="text-base leading-relaxed text-black dark:text-white">
                     Ever since opening our doors, we've helped countless
                     individuals achieve their career and life dreams. We are
                     committed to providing excellent education, training and
@@ -39,14 +39,14 @@ const AboutSection = () => {
                   <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl dark:text-white">
                     About Me
                   </h3>
-                  <p className="dark:text-black-dark text-base leading-relaxed text-black">
+                  <p className="text-base leading-relaxed text-black dark:text-white">
                     I am an SAP functional consultant with overall 13 years of
                     experience in SAP. Teaching has been my passion for a long
                     time, and I have been teaching SAP since 2014. I have worked
                     for major companies in India like CTS, Accenture, IBM &
                     Unilever, etc.
                   </p>
-                  <p className="dark:text-black-dark mt-4 text-base leading-relaxed text-black">
+                  <p className="mt-4 text-base leading-relaxed text-black dark:text-white">
                     I will help you to reach greater heights in your SAP carrier
                     with high-quality training. In this training, I will focus
                     on real-time business scenarios with the best examples.

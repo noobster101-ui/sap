@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Get In Touch
                 </h2>
-                <p className="dark:text-black-dark mb-8 text-base text-black">
+                <p className="mb-8 text-base text-black dark:text-white">
                   Feel free to contact us for any queries about our SAP training
                   courses. We're here to help you with your career goals.
                 </p>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
                         Phone
                       </h3>
-                      <p className="dark:text-black-dark text-black">
+                      <p className="text-black dark:text-white">
                         +91 9686762136
                       </p>
                     </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                       <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
                         Email
                       </h3>
-                      <p className="dark:text-black-dark text-black">
+                      <p className="text-black dark:text-white">
                         murthysaptraining@gmail.com
                       </p>
                     </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                       <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
                         Location
                       </h3>
-                      <p className="dark:text-black-dark text-black">
+                      <p className="text-black dark:text-white">
                         Opp. Smart Point, Phase-1, MCECHS Layout,
                         <br /> Dr.Shivaram Karanth Nagar, RK Hegde Nagar,
                         <br />
@@ -219,7 +219,7 @@ export default function ContactPage() {
                         <input
                           type="text"
                           placeholder="Enter your name"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-black-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
+                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
                         />
                       </div>
                     </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                         <input
                           type="email"
                           placeholder="Enter your email"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-black-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
+                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
                         />
                       </div>
                     </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                         <input
                           type="tel"
                           placeholder="Enter your phone number"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-black-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
+                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
                         />
                       </div>
                     </div>
@@ -252,7 +252,7 @@ export default function ContactPage() {
                         <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                           Course Interested In
                         </label>
-                        <select className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-black-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none">
+                        <select className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none">
                           <option value="">Select a course</option>
                           {courseOptions.map((course) => (
                             <option key={course.id} value={course.id}>
@@ -271,7 +271,7 @@ export default function ContactPage() {
                         <textarea
                           rows={3}
                           placeholder="Enter your message"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-black-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
+                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none"
                         ></textarea>
                       </div>
                     </div>

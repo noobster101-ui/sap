@@ -45,10 +45,10 @@ const Contact = () => {
               <span className="text-primary mb-4 block text-sm font-semibold">
                 Contact Us
               </span>
-              <h2 className="text-body-color mb-4 text-3xl font-bold sm:text-4xl md:text-[40px] dark:text-white">
+              <h2 className="mb-4 text-3xl font-bold text-black sm:text-4xl md:text-[40px] dark:text-white">
                 Have Questions? Get in Touch
               </h2>
-              <p className="dark:text-black-dark mb-10 text-base leading-relaxed text-black">
+              <p className="mb-10 text-base leading-relaxed text-black dark:text-white">
                 Feel free to contact us if you need any assistance, any help or
                 answer your questions. We have expert team will give you a reply
                 as soon as possible.
@@ -60,7 +60,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="name"
-                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
+                        className="mb-3 block text-sm font-semibold text-black dark:text-white"
                       >
                         Your Name
                       </label>
@@ -79,7 +79,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="email"
-                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
+                        className="mb-3 block text-sm font-semibold text-black dark:text-white"
                       >
                         Your Email
                       </label>
@@ -98,7 +98,7 @@ const Contact = () => {
                     <div className="mb-8">
                       <label
                         htmlFor="message"
-                        className="text-body-color mb-3 block text-sm font-semibold dark:text-white"
+                        className="mb-3 block text-sm font-semibold text-black dark:text-white"
                       >
                         Your Message
                       </label>
@@ -135,7 +135,7 @@ const Contact = () => {
           <div className="dark:bg-dark relative w-full max-w-md rounded-lg bg-white p-8 shadow-xl">
             <button
               onClick={closeModal}
-              className="hover:text-body-color absolute top-4 right-4 text-gray-400 dark:hover:text-white"
+              className="absolute top-4 right-4 text-gray-400 hover:text-black dark:hover:text-white"
             >
               <svg
                 className="h-6 w-6"
@@ -167,10 +167,10 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-body-color mb-2 text-2xl font-bold dark:text-white">
+              <h3 className="mb-2 text-2xl font-bold text-black dark:text-white">
                 Message Sent!
               </h3>
-              <p className="dark:text-black-dark mb-6 text-black">
+              <p className="mb-6 text-black dark:text-white">
                 Thank you for contacting us. We'll get back to you soon!
               </p>
               <button
