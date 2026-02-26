@@ -20,7 +20,7 @@ const Hero = () => {
                   Success is nothing more than a few simple disciplines,
                   practiced everyday.
                 </p>
-                <p className="mb-12 text-base leading-relaxed text-black sm:text-lg md:text-xl">
+                <p className="mb-12 text-base leading-relaxed text-black sm:text-lg md:text-xl dark:text-white">
                   Expert SAP Training with 13+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI from
                   seasoned professionals who have worked at top companies like

@@ -53,7 +53,7 @@ const SAPECCModules = () => {
                         {course.title}
                       </Link>
                     </h3>
-                    <p className="border-body-color/10 mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10">
+                    <p className="border-body-color/10 mb-6 border-b pb-6 text-base font-medium text-black dark:border-white dark:border-white/10 dark:text-white">
                       {course.shortDescription}
                     </p>
                     <div className="mt-auto flex items-center">
