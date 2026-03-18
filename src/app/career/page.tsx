@@ -82,7 +82,7 @@ const CareerPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 text-center md:w-1/2 lg:w-1/3">
               <div className="group shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark mb-12 rounded-sm border border-gray-200 p-6 transition-all duration-300">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-all group-hover:text-white">
+                <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full text-4xl transition-all group-hover:text-white">
                   🎯
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
@@ -97,7 +97,7 @@ const CareerPage = () => {
 
             <div className="w-full px-4 text-center md:w-1/2 lg:w-1/3">
               <div className="group shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark mb-12 rounded-sm border border-gray-200 p-6 transition-all duration-300">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-all group-hover:text-white">
+                <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full text-4xl transition-all group-hover:text-white">
                   📄
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
@@ -112,7 +112,7 @@ const CareerPage = () => {
 
             <div className="w-full px-4 text-center md:w-1/2 lg:w-1/3">
               <div className="group shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark mb-12 rounded-sm border border-gray-200 p-6 transition-all duration-300">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-all group-hover:text-white">
+                <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full text-4xl transition-all group-hover:text-white">
                   🤝
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
@@ -127,7 +127,7 @@ const CareerPage = () => {
 
             <div className="w-full px-4 text-center md:w-1/2 lg:w-1/3">
               <div className="group shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark mb-12 rounded-sm border border-gray-200 p-6 transition-all duration-300">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-all group-hover:text-white">
+                <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full text-4xl transition-all group-hover:text-white">
                   🧑‍💻
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
@@ -142,7 +142,7 @@ const CareerPage = () => {
 
             <div className="w-full px-4 text-center md:w-1/2 lg:w-1/3">
               <div className="group shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark mb-12 rounded-sm border border-gray-200 p-6 transition-all duration-300">
-                <div className="bg-primary/10 text-primary group-hover:bg-primary mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full transition-all group-hover:text-white">
+                <div className="bg-primary/10 group-hover:bg-primary mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full text-4xl transition-all group-hover:text-white">
                   📊
                 </div>
                 <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
