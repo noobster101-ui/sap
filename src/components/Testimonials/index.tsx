@@ -1,53 +1,85 @@
-import { Testimonial } from "@/types/testimonial";
+"use client";
+
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { getGoogleReviews } from "@/data/googleReviews";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
-
-const testimonialData: Testimonial[] = [
-  {
-    id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
-  },
-  {
-    id: 2,
-    name: "Devid Weilium",
-    designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
-  },
-];
+import Link from "next/link";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const Testimonials = () => {
+  const googleReviewsData = getGoogleReviews();
+
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-20">
       <div className="container">
         <SectionTitle
-          title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="What Our Google Reviews Say"
+          paragraph="Real reviews from our students (4+ stars only). We're proud of our 4.9 rating!"
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={32}
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          pagination={false}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          className="mx-auto max-w-7xl"
+        >
+          {googleReviewsData.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
+              <div className="h-full p-4">
+                <SingleTestimonial testimonial={testimonial} />
+              </div>
+            </SwiperSlide>
           ))}
+          <div className="swiper-button-prev bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-ml-0"></div>
+          <div className="swiper-button-next bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-mr-0"></div>
+        </Swiper>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/testimonials"
+            className="bg-primary hover:bg-primary/80 shadow-sign-up hover:shadow-submit inline-flex items-center rounded-sm px-8 py-3 text-base font-semibold text-white duration-300"
+          >
+            See All Reviews
+            <svg
+              className="ml-2 h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
+
       <div className="absolute top-5 right-0 z-[-1]">
         <svg
           width="238"

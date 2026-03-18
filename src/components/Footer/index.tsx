@@ -133,6 +133,22 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
+                      href="/career"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
+                    >
+                      Career
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/testimonials"
+                      className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
+                    >
+                      Reviews
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/contact"
                       className="hover:text-primary dark:hover:text-primary mb-4 inline-block text-base text-black duration-300 dark:text-white"
                     >

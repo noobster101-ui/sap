@@ -1,33 +1,19 @@
-# SAP Courses Restructuring TODO
+# Career Page Implementation TODO
 
-## Phase 1: Data Layer ✅
+## Completed: 7/8 ✅
 
-- [x] Update `src/data/courses.ts`
-  - Added `division: 'ECC' | 'S/4HANA'` field to SAPCourse interface
-  - Added `brochure?: string` field for optional PDF link
-  - Updated existing courses with division and brochure
-  - Added all new ECC courses (Logistics, WM, EWM)
-  - Added all new S/4 HANA courses (Finance, WM, TM, ABAP on HANA, EWM, HANA)
+### 1. ✅ Create src/data/careers.ts (Job data + sample openings)
 
-## Phase 2: Components ✅
+### 2. ✅ Create src/components/Career/JobTable.tsx (table + apply buttons)
 
-- [x] Created `src/components/SAP/SAPECCModules.tsx` - Home page ECC section
-- [x] Created `src/components/SAP/SAPS4HANAModules.tsx` - Home page S/4 HANA section
+### 3. ✅ Create src/components/Career/ApplyModal.tsx (form + EmailJS)
 
-## Phase 3: Pages ✅
+### 4. ✅ Create src/app/career/page.tsx (Hero + Job Assistance section + Why SAP section + JobTable)
 
-- [x] Created `src/app/sap-ecc/page.tsx` - New ECC courses page
-- [x] Created `src/app/sap-s4hana/page.tsx` - New S/4 HANA courses page
-- [x] Created `src/app/sap-ecc/[courseId]/page.tsx` - ECC course detail with conditional brochure
-- [x] Created `src/app/sap-s4hana/[courseId]/page.tsx` - S/4 HANA course detail with conditional brochure
-- [x] Updated home page components to link correctly
+### 5. ✅ Edit src/components/Header/menuData.ts (add Career nav link)
 
-## Phase 4: Navigation ✅
+### 6. ✅ Edit src/components/Footer/index.tsx (add Career footer link)
 
-- [x] Updated `src/components/Header/menuData.tsx`
-  - Removed SAP Functional and SAP Technical
-  - Added Courses dropdown with ECC and S/4 HANA options
+### 7. ✅ Install dependencies: react-hook-form emailjs-com @hookform/resolvers
 
-## Phase 5: Build Verification ✅
-
-- [x] Build successful with all new routes
+### 8. ✅ Test: Career page loads, table works, modal opens (EmailJS config needed for full submission)
