@@ -1,7 +1,6 @@
 "use client";
 
 import { jobOpenings, JobOpening } from "../../../../data/careers";
-import Link from "next/link";
 import ScrollUp from "../../../../components/Common/ScrollUp";
 import { notFound } from "next/navigation";
 import { use } from "react";
@@ -38,8 +37,9 @@ const ApplyPage = ({ params }: PageProps) => {
       });
 
       const result = await response.json();
+      console.log("Career form API response:", result);
 
-      if (result.success) {
+      if (response.ok && result.success) {
         setSubmitStatus("success");
         (e.currentTarget as HTMLFormElement).reset();
         setTimeout(() => setSubmitStatus("idle"), 5000);
@@ -48,6 +48,7 @@ const ApplyPage = ({ params }: PageProps) => {
         setTimeout(() => setSubmitStatus("idle"), 5000);
       }
     } catch (error) {
+      console.error("Career form error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

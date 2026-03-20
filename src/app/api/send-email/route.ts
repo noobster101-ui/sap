@@ -80,27 +80,27 @@ export async function POST(request: NextRequest) {
   <meta name="viewport" content="width=device-width">
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-    .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); overflow: hidden; }
-    .header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 40px 30px; text-align: center; }
+    .container { 1px solid #e2e8f0; max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); overflow: hidden; }
+    .header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 20px; text-align: center; }
     .header h1 { margin: 0 0 8px 0; font-size: 28px; font-weight: 700; }
     .header p { margin: 0; opacity: 0.9; font-size: 16px; }
-    .content { padding: 40px 30px; }
+    .content { padding: 0 20px; }
     .data-table { width: 100%; border-collapse: collapse; margin: 30px 0; background: #f8fafc; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
     .data-table th { background: #e2e8f0; padding: 18px 20px; text-align: left; font-weight: 600; color: #1e293b; font-size: 15px; border-bottom: 1px solid #e2e8f0; }
     .data-table td { padding: 18px 20px; border-bottom: 1px solid #f1f5f9; color: #475569; font-size: 15px; }
     .data-table tr:hover { background: #f1f5f9; }
     .attachment { background: #dcfce7; border-left: 4px solid #16a34a; padding: 20px; border-radius: 8px; margin: 24px 0; }
     .attachment strong { color: #166534; }
-    .footer { background: #f8fafc; padding: 30px; text-align: center; border-top: 1px solid #e2e8f0; }
+    .footer { background: #f8fafc; padding: 20px; text-align: center; border-top: 1px solid #e2e8f0; }
     .footer p { margin: 0 0 12px 0; color: #64748b; font-size: 14px; }
     .logo { font-size: 18px; font-weight: 700; color: #1e293b; }
-    @media (max-width: 600px) { .container { margin: 10px; border-radius: 12px; } .content { padding: 30px 20px; } .data-table th, .data-table td { padding: 14px 16px; font-size: 14px; } }
+    @media (max-width: 600px) { .container { margin: 10px; border-radius: 12px; } .content { padding: 0px 20px; } .data-table th, .data-table td { padding: 14px 16px; font-size: 14px; } }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>${isJobApplication ? "📄 New Job Application" : "📧 New Contact Form"}</h1>
+      <h1>${isJobApplication ? "📄 New Job Application" : "📧 New Contact From"}</h1>
       <p>${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })}</p>
     </div>
     
