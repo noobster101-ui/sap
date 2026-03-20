@@ -140,7 +140,7 @@ export async function POST(request: NextRequest) {
 
     const data = await resend.emails.send({
       from: "Murthy SAP Training <onboarding@resend.dev>", // Use Resend verified domain
-      to: ["rakesh9370s@gmail.com"], // Testing - add domain later for multiple recipients
+      to: [" murthysaptraining@gmail.com"], // Testing - add domain later for multiple recipients
       subject,
       html: htmlTemplate,
       attachments: attachment ? [attachment] : [],
