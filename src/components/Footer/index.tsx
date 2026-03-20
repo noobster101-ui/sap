@@ -302,10 +302,18 @@ const Footer = () => {
 
             <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
             <div className="py-8">
-              <p className="text-center text-base text-black dark:text-white">
-                © {new Date().getFullYear()} Murthy SAP Training. All rights
-                reserved.
-              </p>
+              <div className="flex w-full flex-col items-center justify-between gap-1 sm:flex-row">
+                <p className="text-center text-base text-black dark:text-white">
+                  © {new Date().getFullYear()} Murthy SAP Training | All rights
+                  reserved |
+                </p>
+                <Link
+                  href="/sitemap.xml"
+                  className="hover:text-primary dark:hover:text-primary text-center text-sm text-black duration-300 sm:text-left dark:text-white"
+                >
+                  Sitemap
+                </Link>
+              </div>
             </div>
           </div>
         </div>

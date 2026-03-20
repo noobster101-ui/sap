@@ -1,9 +1,14 @@
-"use client";
-
 import React from "react";
 import ScrollUp from "@/components/Common/ScrollUp";
 import { sapCourses } from "@/data/courses";
 import ContactForm from "./ContactForm";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Contact Murthy SAP Training | SAP Course Inquiries Bengaluru",
+  description:
+    "Contact SAP Training Institute in Bengaluru. Get course details, fees, schedule and admission information. Phone/WhatsApp: +91 9686762136",
+});
 
 export default function ContactPage() {
   // Get all course titles for the dropdown

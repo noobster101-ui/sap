@@ -1,8 +1,7 @@
-"use client";
-
 import ScrollUp from "../../components/Common/ScrollUp";
 import SectionTitle from "../../components/Common/SectionTitle";
 import JobTable from "../../components/Career/JobTable";
+import { createPageMetadata } from "@/lib/seo";
 
 const CareerPage = () => {
   return (
@@ -232,5 +231,11 @@ const CareerPage = () => {
     </>
   );
 };
+
+export const metadata = createPageMetadata({
+  title: "SAP Careers | Job Openings & Training Support Bengaluru",
+  description:
+    "SAP Job openings at Murthy Training. Consultant roles in S/4 HANA, MM, FICO, SD. Interview preparation, resume building and career guidance included.",
+});
 
 export default CareerPage;

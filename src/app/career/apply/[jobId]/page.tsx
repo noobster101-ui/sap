@@ -5,6 +5,7 @@ import ScrollUp from "../../../../components/Common/ScrollUp";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import { useState } from "react";
+import { generateMetadata } from "./generateMetadata";
 
 interface PageProps {
   params: Promise<{ jobId: string }>;

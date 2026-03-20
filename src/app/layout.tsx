@@ -25,6 +25,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="author" content="Murthy SAP Training" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://murthysaptraining.com" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="Murthy SAP Training" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_IN" />
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>

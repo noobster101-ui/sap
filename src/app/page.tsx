@@ -7,11 +7,13 @@ import VisionSection from "@/components/Vision";
 import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Murthy SAP Training | Best SAP Training Institute",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Murthy SAP Training | Best SAP Training Institute Bengaluru",
   description:
-    "Expert SAP Training with 13+ years of experience. Get trained in SAP S/4 HANA, ECC, SD, MM, FICO, ABAP, UI5 & FIORI from industry professionals.",
-};
+    "Expert SAP Training with 13+ years experience. S/4 HANA, MM, FICO, ABAP, UI5, FIORI courses. Job assistance. Bengaluru.",
+});
 
 export default function Home() {
   return (
