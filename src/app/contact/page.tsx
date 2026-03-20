@@ -3,6 +3,7 @@
 import React from "react";
 import ScrollUp from "@/components/Common/ScrollUp";
 import { sapCourses } from "@/data/courses";
+import ContactForm from "./ContactForm";
 
 export default function ContactPage() {
   // Get all course titles for the dropdown
@@ -209,82 +210,7 @@ export default function ContactPage() {
                 <h2 className="mb-6 text-2xl font-bold text-black dark:text-white">
                   Send us a Message
                 </h2>
-                <form>
-                  <div className="-mx-4 flex flex-wrap">
-                    <div className="w-full px-4 md:w-1/2">
-                      <div className="mb-6">
-                        <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                          Your Name
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Enter your name"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none dark:text-white"
-                        />
-                      </div>
-                    </div>
-                    <div className="w-full px-4 md:w-1/2">
-                      <div className="mb-6">
-                        <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                          Email Address
-                        </label>
-                        <input
-                          type="email"
-                          placeholder="Enter your email"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none dark:text-white"
-                        />
-                      </div>
-                    </div>
-                    <div className="w-full px-4">
-                      <div className="mb-6">
-                        <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          placeholder="Enter your phone number"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none dark:text-white"
-                        />
-                      </div>
-                    </div>
-                    <div className="w-full px-4">
-                      <div className="mb-6">
-                        <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                          Course Interested In
-                        </label>
-                        <select className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none dark:text-white">
-                          <option value="">Select a course</option>
-                          {courseOptions.map((course) => (
-                            <option key={course.id} value={course.id}>
-                              {course.title}
-                            </option>
-                          ))}
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="w-full px-4">
-                      <div className="mb-6">
-                        <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                          Message
-                        </label>
-                        <textarea
-                          rows={3}
-                          placeholder="Enter your message"
-                          className="border-stroke focus:border-primary dark:border-dark-3 dark:bg-dark w-full rounded-sm border bg-gray-50 px-4 py-3 text-black outline-none dark:text-white"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div className="w-full px-4">
-                      <button
-                        type="submit"
-                        className="bg-primary hover:bg-primary/80 w-full rounded-sm px-8 py-3 text-base font-semibold text-white duration-300"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
             </div>
             <div className="w-full px-4">

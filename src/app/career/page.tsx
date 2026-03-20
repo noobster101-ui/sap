@@ -3,29 +3,8 @@
 import ScrollUp from "../../components/Common/ScrollUp";
 import SectionTitle from "../../components/Common/SectionTitle";
 import JobTable from "../../components/Career/JobTable";
-import { jobOpenings, getJobOpenings } from "../../data/careers";
-
-import { useState } from "react";
 
 const CareerPage = () => {
-  const [selectedJob, setSelectedJob] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleApply = (jobId: string) => {
-    setSelectedJob(jobId);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedJob(null);
-  };
-
-  const getJobTitle = (jobId: string) => {
-    const job = jobOpenings.find((j) => j.id === jobId);
-    return job ? job.title : "Position";
-  };
-
   return (
     <>
       <ScrollUp />

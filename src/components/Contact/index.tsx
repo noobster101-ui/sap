@@ -14,13 +14,33 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (in production, you would use an API route or email service)
-    // For now, we'll show the modal as a success indicator
-    setTimeout(() => {
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("message", formData.message);
+
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormData({ name: "", email: "", message: "" });
+        setIsModalOpen(true);
+        setTimeout(() => {
+          setIsModalOpen(false);
+        }, 4000);
+      } else {
+        alert("Failed: " + result.message);
+      }
+    } catch (error) {
+      alert("Error sending message: " + error);
+    } finally {
       setIsSubmitting(false);
-      setIsModalOpen(true);
-      setFormData({ name: "", email: "", message: "" });
-    }, 1000);
+    }
   };
 
   const handleChange = (

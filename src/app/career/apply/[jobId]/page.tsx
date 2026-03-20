@@ -5,18 +5,54 @@ import Link from "next/link";
 import ScrollUp from "../../../../components/Common/ScrollUp";
 import { notFound } from "next/navigation";
 import { use } from "react";
+import { useState } from "react";
 
 interface PageProps {
   params: Promise<{ jobId: string }>;
 }
 
 const ApplyPage = ({ params }: PageProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
   const resolvedParams = use(params);
   const job: JobOpening | undefined = jobOpenings.find(
     (j: JobOpening) => j.id === resolvedParams.jobId,
   );
 
   if (!job) notFound();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const formData = new FormData(e.currentTarget as HTMLFormElement);
+
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("success");
+        (e.currentTarget as HTMLFormElement).reset();
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      } else {
+        setSubmitStatus("error");
+        setTimeout(() => setSubmitStatus("idle"), 5000);
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -116,6 +152,7 @@ const ApplyPage = ({ params }: PageProps) => {
                   Submit Your Application
                 </h2>
                 <form
+                  onSubmit={handleSubmit}
                   className="-mx-4 flex flex-wrap"
                   encType="multipart/form-data"
                 >
@@ -194,17 +231,29 @@ const ApplyPage = ({ params }: PageProps) => {
                   <div className="my-3 w-full px-4 text-center">
                     <button
                       type="submit"
-                      className="bg-primary hover:bg-primary/80 shadow-sign-up hover:shadow-submit w-1/2 rounded-sm px-8 py-3 text-base font-semibold text-white duration-300"
+                      disabled={isSubmitting}
+                      className="bg-primary hover:bg-primary/80 shadow-sign-up hover:shadow-submit w-1/2 rounded-sm px-8 py-3 text-base font-semibold text-white duration-300 disabled:opacity-50"
                     >
-                      Submit Application
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                     </button>
                   </div>
-                  <input type="hidden" name="jobId" value="{job.id}" />
-                  <input type="hidden" name="jobTitle" value="{job.title}" />
+                  <input type="hidden" name="jobId" value={job.id} />
+                  <input type="hidden" name="jobTitle" value={job.title} />
                 </form>
+                {submitStatus === "success" && (
+                  <div className="mt-4 rounded-sm border border-green-400 bg-green-100 p-4 text-green-700">
+                    Application submitted successfully! Check your email for
+                    confirmation.
+                  </div>
+                )}
+                {submitStatus === "error" && (
+                  <div className="mt-4 rounded-sm border border-red-400 bg-red-100 p-4 text-red-700">
+                    Failed to submit application. Please try again or contact HR
+                    directly.
+                  </div>
+                )}
                 <p className="mt-4 text-center text-xs text-gray-500 dark:text-gray-400">
-                  Applications are sent to HR at murthysaptraining@gmail.com.
-                  We'll contact you within 48 hours.
+                  Applications are sent to murthysaptraining@gmail.com and HR.
                 </p>
               </div>
             </div>
