@@ -39,7 +39,12 @@ const ApplyPage = ({ params }: PageProps) => {
       const result = await response.json();
       console.log("Career form API response:", result);
 
-      if (response.ok && result.success) {
+      console.log("Full response check:", {
+        ok: response.ok,
+        status: response.status,
+        result,
+      });
+      if (result.success) {
         setSubmitStatus("success");
         (e.currentTarget as HTMLFormElement).reset();
         setTimeout(() => setSubmitStatus("idle"), 5000);
