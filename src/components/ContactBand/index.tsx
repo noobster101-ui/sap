@@ -26,10 +26,10 @@ const ContactBand = () => {
                   Contact Us
                 </Link>
                 <a
-                  href="tel:+918031583432"
+                  href="tel:+919686762136"
                   className="rounded-xs border-2 border-white px-3 py-3 text-base font-semibold whitespace-nowrap text-white duration-300 hover:bg-white/10"
                 >
-                  📞 +91 8031583432
+                  📞 +91 9686762136
                 </a>
               </div>
             </div>

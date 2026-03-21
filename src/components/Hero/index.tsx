@@ -43,7 +43,7 @@ const Hero = () => {
                 <div className="mt-8 flex items-center justify-center space-x-4 text-base text-black dark:text-white">
                   <span>
                     📱
-                    <a href="tel:918031583432">+91 8031583432</a>
+                    <a href="tel:919686762136">+91 9686762136</a>
                   </span>
                   <span>
                     📧

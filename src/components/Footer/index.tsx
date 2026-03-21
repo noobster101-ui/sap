@@ -41,7 +41,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/918031583432"
+                    href="https://wa.me/919686762136"
                     aria-label="WhatsApp"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="tel:+918031583432"
+                    href="tel:+919686762136"
                     aria-label="Phone"
                     className="hover:text-primary dark:hover:text-primary text-black duration-300 dark:text-white"
                   >
@@ -242,7 +242,7 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-base text-black dark:text-white">
-                      <a href="tel:918031583432">+91 8031583432</a>
+                      <a href="tel:919686762136">+91 9686762136</a>
                     </span>
                   </li>
                   <li className="mb-4 flex items-start">
