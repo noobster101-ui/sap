@@ -21,7 +21,7 @@ const Hero = () => {
                   practiced everyday.
                 </p>
                 <p className="mb-12 text-base leading-relaxed text-black sm:text-lg md:text-xl dark:text-white">
-                  Expert SAP Training with 13+ years of industry experience. Get
+                  Expert SAP Training with 20+ years of industry experience. Get
                   trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI from
                   seasoned professionals who have worked at top companies like
                   CTS, Accenture, IBM & Unilever.
@@ -41,8 +41,16 @@ const Hero = () => {
                   </Link>
                 </div>
                 <div className="mt-8 flex items-center justify-center space-x-4 text-base text-black dark:text-white">
-                  <span>📱 +91 9686762136</span>
-                  <span>📧 murthysaptraining@gmail.com</span>
+                  <span>
+                    📱
+                    <a href="tel:918031583432">+91 8031583432</a>
+                  </span>
+                  <span>
+                    📧
+                    <a href="mailto:murthysaptraining@gmail.com">
+                      murthysaptraining@gmail.com
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>

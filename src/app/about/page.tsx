@@ -58,13 +58,19 @@ export default function AboutPage() {
                   About Murthy SAP Training
                 </h2>
                 <p className="mb-6 text-base leading-relaxed text-black dark:text-white">
-                  Ever since opening our doors, we've helped countless
+                  {/* Ever since opening our doors, we've helped countless
                   individuals achieve their career and life dreams. We are
                   committed to providing excellent education, training and
                   resources so that our students will thrive in today's
                   competitive world. With flexible program options and great
                   instructors, we're sure you'll be satisfied with your
-                  education at Murthy SAP Training.
+                  education at Murthy SAP Training. */}
+                  I am an SAP Solution Architect with over 20+ years of
+                  professional experience in SAP. Alongside my industry career,
+                  I have nurtured a strong passion for teaching and have been
+                  actively training and mentoring SAP professionals since 2011.
+                  I am committed to sharing practical knowledge and helping
+                  learners build successful careers in SAP.
                 </p>
                 <p className="text-base leading-relaxed text-black dark:text-white">
                   Our mission is to help you reach greater heights in your SAP
@@ -79,7 +85,7 @@ export default function AboutPage() {
                   <div className="text-center">
                     <div className="mb-4 text-6xl">🎓</div>
                     <h3 className="text-2xl font-bold text-black dark:text-white">
-                      13+ Years
+                      20+ Years
                     </h3>
                     <p className="text-black dark:text-white">
                       Industry Experience
@@ -109,7 +115,7 @@ export default function AboutPage() {
                   About The Trainer
                 </h2>
                 <p className="mb-4 text-base leading-relaxed text-black dark:text-white">
-                  I am an SAP functional consultant with overall 13 years of
+                  I am an SAP functional consultant with overall 20+ years of
                   experience in SAP. Teaching has been my passion for a long
                   time, and I have been teaching SAP since 2014. I have worked
                   for major companies in India like CTS, Accenture, IBM &

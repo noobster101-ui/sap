@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <title>Murthy SAP Training | Best SAP Training Institute</title>
         <meta
           name="description"
-          content="Expert SAP Training with 13+ years of experience. Get trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI from industry professionals."
+          content="Expert SAP Training with 20+ years of experience. Get trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI from industry professionals."
         />
         <meta
           name="keywords"

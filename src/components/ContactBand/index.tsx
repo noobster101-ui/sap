@@ -13,22 +13,23 @@ const ContactBand = () => {
                 Ready to Start Your SAP Career?
               </h2>
               <p className="text-lg text-white/90">
-                Contact us today to learn more about our training programs and how we can help you succeed.
+                Contact us today to learn more about our training programs and
+                how we can help you succeed.
               </p>
             </div>
             <div className="mt-8 w-full px-4 lg:mt-0 lg:w-1/3">
-              <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+              <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                 <Link
                   href="/contact"
-                  className="rounded-xs bg-white px-8 py-3 text-base font-semibold text-primary duration-300 hover:bg-gray-100"
+                  className="text-primary rounded-xs bg-white px-3 py-3 text-base font-semibold whitespace-nowrap duration-300 hover:bg-gray-100"
                 >
                   Contact Us
                 </Link>
                 <a
-                  href="tel:+919686762136"
-                  className="rounded-xs border-2 border-white px-8 py-3 text-base font-semibold text-white duration-300 hover:bg-white/10"
+                  href="tel:+918031583432"
+                  className="rounded-xs border-2 border-white px-3 py-3 text-base font-semibold whitespace-nowrap text-white duration-300 hover:bg-white/10"
                 >
-                  📞 +91 9686762136
+                  📞 +91 8031583432
                 </a>
               </div>
             </div>
@@ -40,4 +41,3 @@ const ContactBand = () => {
 };
 
 export default ContactBand;
-

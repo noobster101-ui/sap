@@ -14,8 +14,12 @@ const Footer = () => {
                   About Us
                 </h2>
                 <p className="mb-9 text-base leading-relaxed text-black dark:text-white">
-                  Expert SAP Training with 13+ years of industry experience. Get
-                  trained in SAP S/4 HANA, MM, FICO, ABAP, UI5 & FIORI.
+                  I am an SAP Solution Architect with over 20+ years of
+                  professional experience in SAP. Alongside my industry career,
+                  I have nurtured a strong passion for teaching and have been
+                  actively training and mentoring SAP professionals since 2011.
+                  I am committed to sharing practical knowledge and helping
+                  learners build successful careers in SAP.
                 </p>
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
                   Connect with us
@@ -37,7 +41,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/919686762136"
+                    href="https://wa.me/918031583432"
                     aria-label="WhatsApp"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -71,7 +75,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="tel:+919686762136"
+                    href="tel:+918031583432"
                     aria-label="Phone"
                     className="hover:text-primary dark:hover:text-primary text-black duration-300 dark:text-white"
                   >
@@ -238,7 +242,7 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-base text-black dark:text-white">
-                      +91 9686762136
+                      <a href="tel:918031583432">+91 8031583432</a>
                     </span>
                   </li>
                   <li className="mb-4 flex items-start">
@@ -256,7 +260,9 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-base text-black dark:text-white">
-                      murthysaptraining@gmail.com
+                      <a href="mailto:murthysaptraining@gmail.com">
+                        murthysaptraining@gmail.com
+                      </a>
                     </span>
                   </li>
                   <li className="mb-4 flex items-start">
@@ -280,11 +286,8 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-base text-black dark:text-white">
-                      Opp. Smart Point, Phase-1, MCECHS Layout,
-                      <br />
-                      Dr.Shivaram Karanth Nagar, RK Hegde Nagar,
-                      <br />
-                      Bengaluru, Karnataka 560077
+                      2nd Cross, Winn Field Garden Dr. SRK Nagar, Hegde Nagar ,
+                      Bangalore- 560077
                     </span>
                   </li>
                 </ul>

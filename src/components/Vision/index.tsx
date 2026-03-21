@@ -39,9 +39,9 @@ const VisionSection = () => {
                   Our Vision
                 </h3>
                 <p className="text-center text-base text-gray-600 dark:text-gray-300">
-                  To be the leading SAP training provider, helping individuals
-                  achieve their career and life dreams through quality education
-                  and practical training.
+                  To be globally recognized SAP Training institute empowering
+                  individuals to build successful careers through high-quality
+                  industry-relevant education and real-time practical exposure.
                 </p>
               </div>
             </div>
@@ -66,9 +66,10 @@ const VisionSection = () => {
                   Our Mission
                 </h3>
                 <p className="text-center text-base text-gray-600 dark:text-gray-300">
-                  To provide excellent education, training, and resources so
-                  that our students will thrive in today's competitive world
-                  with flexible program options and expert instructors.
+                  To deliver exceptional SAP Training through expert-led
+                  sessions hands-on project experience and flexile learning
+                  programs that equip learners with the skills and confidence
+                  needed to succeed in today’s competitive job market.
                 </p>
               </div>
             </div>

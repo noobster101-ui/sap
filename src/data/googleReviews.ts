@@ -16,7 +16,7 @@ export const googleReviews: Testimonial[] = [
     name: "Priya Sharma",
     designation: "Working Professional",
     content:
-      "Completed SAP MM course. Trainer has 13+ years experience, very practical approach. Flexible timings perfect for working professionals.",
+      "Completed SAP MM course. Trainer has 20+ years experience, very practical approach. Flexible timings perfect for working professionals.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -40,5 +40,7 @@ export const googleReviews: Testimonial[] = [
   },
 ];
 
-export const getGoogleReviews = () =>
+export const getFallbackReviews = () =>
   googleReviews.filter((review) => review.star >= 4);
+
+export const getGoogleReviews = getFallbackReviews; // backward compat

@@ -12,7 +12,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Murthy SAP Training | Best SAP Training Institute Bengaluru",
   description:
-    "Expert SAP Training with 13+ years experience. S/4 HANA, MM, FICO, ABAP, UI5, FIORI courses. Job assistance. Bengaluru.",
+    "Expert SAP Training with 20+ years experience. S/4 HANA, MM, FICO, ABAP, UI5, FIORI courses. Job assistance. Bengaluru.",
 });
 
 export default function Home() {

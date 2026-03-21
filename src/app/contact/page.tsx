@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Contact Murthy SAP Training | SAP Course Inquiries Bengaluru",
   description:
-    "Contact SAP Training Institute in Bengaluru. Get course details, fees, schedule and admission information. Phone/WhatsApp: +91 9686762136",
+    "Contact SAP Training Institute in Bengaluru. Get course details, fees, schedule and admission information. Phone/WhatsApp: +91 8031583432",
 });
 
 export default function ContactPage() {
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   courses. We're here to help you with your career goals.
                 </p>
 
-                <div className="mb-8">
+                <div className="my-10">
                   <div className="flex items-start">
                     <div className="bg-primary/10 mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                       <svg
@@ -99,13 +99,13 @@ export default function ContactPage() {
                         Phone
                       </h3>
                       <p className="text-black dark:text-white">
-                        +91 9686762136
+                        <a href="tel:918031583432">+91 8031583432</a>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mb-8">
+                <div className="my-10">
                   <div className="flex items-start">
                     <div className="bg-primary/10 mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                       <svg
@@ -127,13 +127,15 @@ export default function ContactPage() {
                         Email
                       </h3>
                       <p className="text-black dark:text-white">
-                        murthysaptraining@gmail.com
+                        <a href="mailto:murthysaptraining@gmail.com">
+                          murthysaptraining@gmail.com
+                        </a>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mb-8">
+                <div className="my-10">
                   <div className="flex items-start">
                     <div className="bg-primary/10 mr-4 flex h-12 w-12 items-center justify-center rounded-full">
                       <svg
@@ -161,10 +163,8 @@ export default function ContactPage() {
                         Location
                       </h3>
                       <p className="text-black dark:text-white">
-                        Opp. Smart Point, Phase-1, MCECHS Layout,
-                        <br /> Dr.Shivaram Karanth Nagar, RK Hegde Nagar,
-                        <br />
-                        Bengaluru, Karnataka 560077
+                        2nd Cross, Winn Field Garden Dr. SRK Nagar, Hegde Nagar
+                        , Bangalore- 560077
                       </p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                 <h3 className="my-5 text-lg font-semibold text-black dark:text-white">
                   Follow Us
                 </h3>
-                <div className="flex items-center">
+                <div className="my-3 flex items-center">
                   <a
                     href="https://www.facebook.com/p/SAP-Murthy-Training-100065375263630/"
                     aria-label="Facebook"
@@ -192,7 +192,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/919686762136"
+                    href="https://wa.me/918031583432"
                     aria-label="WhatsApp"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -226,7 +226,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="tel:+919686762136"
+                    href="tel:+918031583432"
                     aria-label="Phone"
                     className="hover:text-primary dark:hover:text-primary text-black duration-300 dark:text-white"
                   >
