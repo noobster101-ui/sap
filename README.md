@@ -4,13 +4,6 @@
 
 **Live Admin:** http://localhost:3000/admin
 
-**Login:**
-
-```
-Email: admin@gmail.com
-Password: murthySap@2026
-```
-
 ## Tabs
 
 1. **Reviews** - Google testimonials (status toggle)

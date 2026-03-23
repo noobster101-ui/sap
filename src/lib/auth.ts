@@ -1,9 +1,9 @@
 import { cookies } from "next/headers";
 import { NextRequest } from "next/server";
 
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@gmail.com";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "murthySap@2026";
-const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET || "murthySap@2026";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+const SESSION_SECRET = process.env.ADMIN_SESSION_SECRET;
 const COOKIE_NAME = "admin_session";
 
 export function getAdminSessionMiddleware(request: NextRequest): boolean {
