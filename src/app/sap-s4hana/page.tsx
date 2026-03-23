@@ -3,11 +3,22 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getS4HANACourses } from "@/data/courses";
+import useSWR from "swr";
+import { SAPCourse } from "@/types/course";
 import ScrollUp from "@/components/Common/ScrollUp";
 
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
+
 export default function SAPS4HANAPage() {
-  const courses = getS4HANACourses();
+  const { data: coursesData, isLoading } = useSWR(
+    "/api/courses?division=S/4HANA",
+    fetcher,
+  );
+
+  const courses: SAPCourse[] = coursesData || [];
+
+  if (isLoading)
+    return <div className="py-8 text-center">Loading S/4 HANA courses...</div>;
 
   return (
     <React.Fragment>
@@ -92,16 +103,6 @@ export default function SAPS4HANAPage() {
                     </p>
                     <div className="mt-auto flex items-center">
                       <div className="border-body-color/10 mr-5 flex items-center border-r pr-5 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5 dark:border-white/10">
-                        {/* <div className="mr-4">
-                          <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                            <Image
-                              src={course.author.image}
-                              alt={course.author.name}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                        </div> */}
                         <div className="w-full">
                           <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                             By {course.author.name}

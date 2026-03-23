@@ -3,11 +3,22 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getECCCourses } from "@/data/courses";
+import useSWR from "swr";
+import { SAPCourse } from "@/types/course";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
+
 import ScrollUp from "@/components/Common/ScrollUp";
 
 export default function SAPECCPage() {
-  const courses = getECCCourses();
+  const { data: coursesData, isLoading } = useSWR(
+    "/api/courses?division=ECC",
+    fetcher,
+  );
+  const courses: SAPCourse[] = coursesData || [];
+
+  if (isLoading)
+    return <div className="py-8 text-center">Loading ECC courses...</div>;
 
   return (
     <React.Fragment>

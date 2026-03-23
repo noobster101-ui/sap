@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { getGoogleReviews } from "@/data/googleReviews";
+import useSWR from "swr";
+import { Testimonial } from "@/types/testimonial";
+import { getFallbackReviews } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 import Link from "next/link";
@@ -12,7 +14,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Testimonials = () => {
-  const googleReviewsData = getGoogleReviews();
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+  const { data: liveReviews, error } = useSWR("/api/reviews", fetcher, {
+    revalidateOnFocus: false,
+    revalidateIfStale: false,
+    revalidateOnReconnect: true,
+  });
+
+  const reviews =
+    liveReviews && !error && liveReviews.length > 0
+      ? (liveReviews as Testimonial[])
+      : getFallbackReviews();
+
+  const isLive = liveReviews && !error && liveReviews.length > 0;
 
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-20">
@@ -44,15 +59,14 @@ const Testimonials = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          className="mx-auto max-w-7xl"
+          className="mx-auto"
         >
-          {googleReviewsData.map((testimonial) => (
+          {reviews.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="h-full p-4">
-                <SingleTestimonial testimonial={testimonial} />
-              </div>
+              <SingleTestimonial testimonial={testimonial} />
             </SwiperSlide>
           ))}
+
           <div className="swiper-button-prev bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-ml-0"></div>
           <div className="swiper-button-next bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-mr-0"></div>
         </Swiper>

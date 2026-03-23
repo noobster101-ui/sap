@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { getECCCourses } from "@/data/courses";
+import useSWR from "swr";
+import { SAPCourse } from "@/types/course";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 const SAPECCModules = () => {
-  const eccCourses = getECCCourses();
+  const { data: eccCoursesData } = useSWR("/api/courses?division=ECC", fetcher);
+  const eccCourses: SAPCourse[] = eccCoursesData || [];
+
   // Show only first 3 courses on home page
   const displayCourses = eccCourses.slice(0, 3);
 

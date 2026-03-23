@@ -1,11 +1,18 @@
 "use client";
 
-import { jobOpenings, JobOpening } from "@/data/careers";
+import useSWR from "swr";
+import { JobOpening } from "@/types/job";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
+
 import Link from "next/link";
 
 interface JobTableProps {}
 
 const JobTable = (): React.ReactElement => {
+  const { data: jobsData } = useSWR("/api/jobs", fetcher);
+  const jobs: JobOpening[] = jobsData || [];
+
   return (
     <section className="dark:bg-gray-dark bg-gray-50 py-16 lg:py-24">
       <div className="container">
@@ -42,7 +49,7 @@ const JobTable = (): React.ReactElement => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
-              {jobOpenings.map((job: JobOpening) => (
+              {jobs.map((job: JobOpening) => (
                 <tr
                   key={job.id}
                   className="transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-700"

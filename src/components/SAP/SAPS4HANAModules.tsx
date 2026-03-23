@@ -2,10 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { getS4HANACourses } from "@/data/courses";
+import useSWR from "swr";
+import { SAPCourse } from "@/types/course";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 const SAPS4HANAModules = () => {
-  const s4hanaCourses = getS4HANACourses();
+  const { data: s4hanaCoursesData } = useSWR(
+    "/api/courses?division=S/4HANA",
+    fetcher,
+  );
+
+  const s4hanaCourses: SAPCourse[] = s4hanaCoursesData || [];
+
   // Show only first 3 courses on home page
   const displayCourses = s4hanaCourses.slice(0, 3);
 

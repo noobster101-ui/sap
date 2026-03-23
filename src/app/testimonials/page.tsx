@@ -1,13 +1,26 @@
 "use client";
 
 import React from "react";
-import { getGoogleReviews } from "@/data/googleReviews";
+import useSWR from "swr";
+import { Testimonial } from "@/types/testimonial";
+import { getFallbackReviews } from "@/types/testimonial";
 import SectionTitle from "@/components/Common/SectionTitle";
 import SingleTestimonial from "@/components/Testimonials/SingleTestimonial";
 import ScrollUp from "@/components/Common/ScrollUp";
 
 export default function TestimonialsPage() {
-  const reviews = getGoogleReviews();
+  const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+  const { data: liveReviews, error } = useSWR("/api/reviews", fetcher, {
+    revalidateOnFocus: false,
+    revalidateIfStale: false,
+    revalidateOnReconnect: true,
+  });
+
+  const reviews =
+    liveReviews && !error && liveReviews.length > 0
+      ? (liveReviews as Testimonial[])
+      : getFallbackReviews();
 
   return (
     <>
