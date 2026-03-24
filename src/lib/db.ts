@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 
 // Vercel Postgres uses process.env.POSTGRES_URL
 declare global {
-  var __db__: postgres | undefined;
+  var __db__: ReturnType<typeof postgres> | undefined;
 }
 
 const client = globalThis.__db__ ?? postgres(process.env.POSTGRES_URL!);

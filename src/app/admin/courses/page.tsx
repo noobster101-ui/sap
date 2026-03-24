@@ -1,7 +1,9 @@
-import useSWR from "swr";
-import { useState, useEffect } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import useSWRMutation from "swr/mutation";
 import { SAPCourse } from "@/types/course";
+import useSWR from "swr";
 
 interface FormState {
   id: string;

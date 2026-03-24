@@ -1,13 +1,9 @@
-// Drizzle schema (unused for now - inMemoryDb active)
-// Add back when Vercel Postgres connected
-
-/*
 import {
+  boolean,
+  integer,
   pgTable,
   serial,
   text,
-  integer,
-  boolean,
   timestamp,
 } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
@@ -24,5 +20,4 @@ export const reviews = pgTable("reviews", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
-export const reviewsRelations = relations(reviews, ({ }) => ({}));
-*/
+export const reviewsRelations = relations(reviews, () => ({}));
