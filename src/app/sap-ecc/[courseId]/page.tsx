@@ -159,19 +159,19 @@ export default function SAPECCCourseDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="dark:border-dark-3 mb-6 border-b border-gray-200 pb-6">
+                {/* <div className="dark:border-dark-3 mb-6 border-b border-gray-200 pb-6">
                   <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
                     Instructor
                   </h3>
                   <div className="flex items-center">
-                    {/* <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full">
+                    <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full">
                       <Image
                         src={course.author.image}
                         alt={course.author.name}
                         fill
                         className="object-cover"
                       />
-                    </div> */}
+                    </div>
                     <div>
                       <h4 className="font-semibold text-black dark:text-white">
                         {course.author.name}
@@ -181,7 +181,7 @@ export default function SAPECCCourseDetailPage({ params }: PageProps) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="dark:border-dark-3 mb-6 border-b border-gray-200 pb-6">
                   <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
@@ -199,14 +199,14 @@ export default function SAPECCCourseDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                {/* <div className="mb-6">
                   <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
                     Published Date
                   </h3>
                   <p className="text-black dark:text-white">
                     {course.publishDate}
                   </p>
-                </div>
+                </div> */}
 
                 <Link
                   href="/contact"

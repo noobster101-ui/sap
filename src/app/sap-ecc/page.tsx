@@ -71,7 +71,7 @@ export default function SAPECCPage() {
             {courses.map((course) => (
               <div
                 key={course.id}
-                className="mb-6 w-full px-4 md:w-1/2 lg:w-1/3"
+                className="mb-4 mb-6 w-full px-4 md:w-1/2 lg:w-1/3"
               >
                 <div className="group border-stroke shadow-two hover:shadow-two dark:border-dark-3 dark:bg-dark dark:hover:shadow-gray-dark relative flex h-full flex-col overflow-hidden rounded-sm border bg-white duration-300">
                   <Link
@@ -98,12 +98,12 @@ export default function SAPECCPage() {
                         {course.title}
                       </Link>
                     </h3>
-                    <p className="border-body-color/10 mb-6 border-b pb-6 text-base font-medium text-black dark:border-white/10 dark:text-white">
+                    <p className="border-body-color/10 pb-3 text-base font-medium text-black dark:border-white/10 dark:text-white">
                       {course.shortDescription}
                     </p>
-                    <div className="mt-auto flex items-center">
+                    {/* <div className="mt-auto flex items-center">
                       <div className="border-body-color/10 mr-5 flex items-center border-r pr-5 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5 dark:border-white/10">
-                        {/* <div className="mr-4">
+                        <div className="mr-4">
                           <div className="relative h-10 w-10 overflow-hidden rounded-full">
                             <Image
                               src={course.author.image}
@@ -112,7 +112,7 @@ export default function SAPECCPage() {
                               className="object-cover"
                             />
                           </div>
-                        </div> */}
+                        </div>
                         <div className="w-full">
                           <h4 className="mb-1 text-sm font-medium text-black dark:text-white">
                             By {course.author.name}
@@ -130,7 +130,7 @@ export default function SAPECCPage() {
                           {course.publishDate}
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

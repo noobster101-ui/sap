@@ -2,7 +2,6 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 import { reviews } from "../db/schema";
-import { eq } from "drizzle-orm";
 
 // Vercel Postgres uses process.env.POSTGRES_URL
 declare global {

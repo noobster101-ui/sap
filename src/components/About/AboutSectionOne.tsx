@@ -8,7 +8,10 @@ const AboutSection = () => {
     <>
       <section id="about" className="dark:bg-gray-dark bg-white py-16 lg:py-24">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center">
+          <h2 className="mb-8 text-center text-2xl font-bold text-black dark:text-white">
+            Why Choose Murthy SAP Training
+          </h2>
+          <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto mb-12 aspect-[25/24] max-w-[700px] text-center lg:m-0">
                 <Image
@@ -21,12 +24,9 @@ const AboutSection = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <div className="max-w-[700px]">
-                <h2 className="mb-8 text-2xl font-bold text-black dark:text-white">
-                  Why Choose Murthy SAP Training
-                </h2>
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-1">
-                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 p-4 dark:bg-gray-800">
-                    <span className="bg-primary mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
+                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 px-4 py-4 dark:bg-gray-800">
+                    <span className="bg-primary mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
                       &#10003;
                     </span>
                     <div>
@@ -39,8 +39,8 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 p-4 dark:bg-gray-800">
-                    <span className="bg-primary mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
+                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 px-4 py-4 dark:bg-gray-800">
+                    <span className="bg-primary mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
                       &#10003;
                     </span>
                     <div>
@@ -54,8 +54,8 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 p-4 dark:bg-gray-800">
-                    <span className="bg-primary mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
+                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 px-4 py-4 dark:bg-gray-800">
+                    <span className="bg-primary mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
                       &#10003;
                     </span>
                     <div>
@@ -68,8 +68,8 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 p-4 dark:bg-gray-800">
-                    <span className="bg-primary mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
+                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 px-4 py-4 dark:bg-gray-800">
+                    <span className="bg-primary mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
                       &#10003;
                     </span>
                     <div>
@@ -82,8 +82,8 @@ const AboutSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 p-4 dark:bg-gray-800">
-                    <span className="bg-primary mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
+                  <div className="dark:border-dark-3 flex items-start rounded-sm border border-gray-200 bg-gray-50 px-4 py-4 dark:bg-gray-800">
+                    <span className="bg-primary mr-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg font-semibold text-white">
                       &#10003;
                     </span>
                     <div>
@@ -97,14 +97,16 @@ const AboutSection = () => {
                     </div>
                   </div>
                 </div>
-                <Link
-                  href="/career"
-                  className="bg-primary hover:bg-primary/80 mt-8 inline-block rounded-xs px-8 py-3 text-base font-semibold text-white duration-300"
-                >
-                  View Career Opportunities
-                </Link>
               </div>
             </div>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/career"
+              className="bg-primary hover:bg-primary/80 mt-8 inline-block rounded-xs px-8 py-3 text-base font-semibold text-white duration-300"
+            >
+              View Career Opportunities
+            </Link>
           </div>
         </div>
       </section>

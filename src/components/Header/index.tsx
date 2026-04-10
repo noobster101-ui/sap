@@ -70,8 +70,8 @@ const Header = () => {
                   src="/images/brands/logo.png"
                   alt="logo"
                   width={200}
-                  height={70}
-                  className="rounded"
+                  height={80}
+                  className="h-auto w-32 rounded sm:w-40 lg:w-50"
                 />
               </Link>
             </div>

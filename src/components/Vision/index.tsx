@@ -18,7 +18,7 @@ const VisionSection = () => {
           </div>
 
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="mb-4 w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-400">
                   <svg
@@ -45,7 +45,7 @@ const VisionSection = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="mb-4 w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-400">
                   <svg
@@ -73,7 +73,7 @@ const VisionSection = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="mb-4 w-full px-4 md:w-1/2 lg:w-1/3">
               <div className="mb-8 h-full rounded-sm border border-gray-200 bg-white p-8 shadow-md dark:border-gray-700 dark:bg-gray-800">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-400">
                   <svg
