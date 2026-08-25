@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove output:"export" for Vercel - they handle Next.js natively
+  turbopack: {
+    root: __dirname,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -10,6 +12,18 @@ const nextConfig = {
         port: "",
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
   },
 };
 

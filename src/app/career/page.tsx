@@ -233,9 +233,10 @@ const CareerPage = () => {
 };
 
 export const metadata = createPageMetadata({
-  title: "SAP Careers | Job Openings & Training Support Bengaluru",
+  title: "SAP Jobs & Career Support Bangalore | S/4HANA | FICO MM SD | Murthy SAP",
   description:
-    "SAP Job openings at Murthy Training. Consultant roles in S/4 HANA, MM, FICO, SD. Interview preparation, resume building and career guidance included.",
+    "SAP Career opportunities at Murthy SAP Training Bengaluru. S/4HANA, ECC, FICO, MM, SD roles. Resume building, mock interviews, job assistance & career guidance. View openings.",
+  path: "/career",
 });
 
 export default CareerPage;

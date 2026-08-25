@@ -5,19 +5,25 @@ import SAPECCModules from "@/components/SAP/SAPECCModules";
 import SAPS4HANAModules from "@/components/SAP/SAPS4HANAModules";
 import VisionSection from "@/components/Vision";
 import Testimonials from "@/components/Testimonials";
-import { Metadata } from "next";
-
+import { organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Murthy SAP Training | Best SAP Training Institute Bengaluru",
+  title: "Best SAP Training in Bangalore | S/4HANA | FICO MM SD ABAP | Murthy SAP",
   description:
-    "Expert SAP Training with 20+ years experience. S/4 HANA, MM, FICO, ABAP, UI5, FIORI courses. Job assistance. Bengaluru.",
+    "Best SAP Training Institute in Bangalore - Hegde Nagar. SAP S/4HANA, ECC, FICO, MM, SD, ABAP on HANA, UI5 & FIORI. 20+ years expert trainers, live projects, 100% placement support & interview prep. Call 9686762136.",
+  path: "/",
+  image: "/images/sap/sap-s4-hana.jpg",
 });
 
 export default function Home() {
+  const orgLd = organizationJsonLd();
+  const breadcrumbLd = breadcrumbJsonLd([{ name: "Home", url: "/" }]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <ScrollUp />
       <Hero />
       <AboutSection />

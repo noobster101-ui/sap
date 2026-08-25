@@ -5,9 +5,11 @@ import ContactForm from "./ContactForm";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Contact Murthy SAP Training | SAP Course Inquiries Bengaluru",
+  title: "Contact Murthy SAP Training | SAP Course Enquiry Bengaluru | Fees & Schedule",
   description:
-    "Contact SAP Training Institute in Bengaluru. Get course details, fees, schedule and admission information. Phone/WhatsApp: +91 9686762136",
+    "Contact Murthy SAP Training, Hegde Nagar Bengaluru: 2nd Cross, Winn Field, SRK Nagar. SAP S/4HANA, FICO, MM, SD, ABAP course fees, batch timings, admission. Phone/WhatsApp +91 9686762136, murthysaptraining@gmail.com.",
+  path: "/contact",
+  image: "/images/brands/logo.png",
 });
 
 export default function ContactPage() {

@@ -46,7 +46,8 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   const usePathName = usePathname();
 
@@ -54,7 +55,7 @@ const Header = () => {
     <>
       <header
         className={`header dark:bg-gray-dark/95 left-0 z-40 z-[99] flex w-full items-center bg-white/95 shadow-md backdrop-blur-sm ${
-          sticky ? "absolute fixed" : "relative"
+          sticky ? "fixed top-0" : "relative"
         }`}
       >
         <div className="container">
