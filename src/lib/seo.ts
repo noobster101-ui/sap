@@ -39,7 +39,7 @@ export function createPageMetadata({
   const ogImage = image || "/images/brands/logo.png";
   return {
     ...baseMetadata,
-    title,
+    title: { absolute: title },
     description,
     keywords: keywords,
     alternates: {

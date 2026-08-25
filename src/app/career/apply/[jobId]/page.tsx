@@ -5,7 +5,6 @@ import ScrollUp from "../../../../components/Common/ScrollUp";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import { useState } from "react";
-import { generateMetadata } from "./generateMetadata";
 
 interface PageProps {
   params: Promise<{ jobId: string }>;
@@ -23,6 +22,7 @@ const ApplyPage = ({ params }: PageProps) => {
   );
 
   if (!job) notFound();
+  if (!job) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

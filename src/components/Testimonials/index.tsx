@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -14,134 +13,75 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const Testimonials = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
-  const { data: liveReviews, error } = useSWR("/api/reviews", fetcher, {
+  const { data: liveReviews, error } = useSWR(mounted ? "/api/reviews" : null, fetcher, {
     revalidateOnFocus: false,
     revalidateIfStale: false,
     revalidateOnReconnect: true,
   });
+  const fallback = getFallbackReviews();
+  const liveArray = Array.isArray(liveReviews) ? (liveReviews as Testimonial[]) : [];
+  const reviews = !error && liveArray.length > 0 ? liveArray : fallback;
+  const safeReviews = Array.isArray(reviews) ? reviews.filter((r) => r && r.id && r.name) : fallback;
 
-  const reviews =
-    liveReviews && !error && liveReviews.length > 0
-      ? (liveReviews as Testimonial[])
-      : getFallbackReviews();
-
-  const isLive = liveReviews && !error && liveReviews.length > 0;
+  if (!mounted) {
+    return (
+      <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-20">
+        <div className="container">
+          <SectionTitle title="What Our Google Reviews Say" paragraph="Real reviews from our students (4+ stars only). We're proud of our 4.9 rating!" center />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {fallback.slice(0, 3).map((testimonial) => (
+              <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-20">
       <div className="container">
-        <SectionTitle
-          title="What Our Google Reviews Say"
-          paragraph="Real reviews from our students (4+ stars only). We're proud of our 4.9 rating!"
-          center
-        />
-
+        <SectionTitle title="What Our Google Reviews Say" paragraph="Real reviews from our students (4+ stars only). We're proud of our 4.9 rating!" center />
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={32}
           slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
+          breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+          navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
           pagination={false}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           className="mx-auto"
         >
-          {reviews.map((testimonial) => (
+          {safeReviews.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
               <SingleTestimonial testimonial={testimonial} />
             </SwiperSlide>
           ))}
-
           <div className="swiper-button-prev bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-ml-0"></div>
           <div className="swiper-button-next bg-dark/80 hover:bg-dark dark:bg-primary/40 absolute top-1/2 z-20 -translate-y-1/2 cursor-pointer rounded-full p-2 text-white shadow-lg transition-all duration-300 lg:-mr-0"></div>
         </Swiper>
-
         <div className="mt-12 text-center">
-          <Link
-            href="/testimonials"
-            className="bg-primary hover:bg-primary/80 shadow-sign-up hover:shadow-submit inline-flex items-center rounded-sm px-8 py-3 text-base font-semibold text-white duration-300"
-          >
+          <Link href="/testimonials" className="bg-primary hover:bg-primary/80 shadow-sign-up hover:shadow-submit inline-flex items-center rounded-sm px-8 py-3 text-base font-semibold text-white duration-300">
             See All Reviews
-            <svg
-              className="ml-2 h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
+            <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
         </div>
       </div>
-
       <div className="absolute top-5 right-0 z-[-1]">
-        <svg
-          width="238"
-          height="531"
-          viewBox="0 0 238 531"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="422.819"
-            y="-70.8145"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(51.2997 422.819 -70.8145)"
-            fill="url(#paint0_linear_83:2)"
-          />
-          <rect
-            opacity="0.3"
-            x="426.568"
-            y="144.886"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(51.2997 426.568 144.886)"
-            fill="url(#paint1_linear_83:2)"
-          />
+        <svg width="238" height="531" viewBox="0 0 238 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect opacity="0.3" x="422.819" y="-70.8145" width="196" height="541.607" rx="2" transform="rotate(51.2997 422.819 -70.8145)" fill="url(#paint0_linear_83:2)" />
+          <rect opacity="0.3" x="426.568" y="144.886" width="59.7544" height="541.607" rx="2" transform="rotate(51.2997 426.568 144.886)" fill="url(#paint1_linear_83:2)" />
           <defs>
-            <linearGradient
-              id="paint0_linear_83:2"
-              x1="517.152"
-              y1="-251.373"
-              x2="517.152"
-              y2="459.865"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint0_linear_83:2" x1="517.152" y1="-251.373" x2="517.152" y2="459.865" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint1_linear_83:2"
-              x1="455.327"
-              y1="-35.673"
-              x2="455.327"
-              y2="675.565"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint1_linear_83:2" x1="455.327" y1="-35.673" x2="455.327" y2="675.565" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" />
               <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
             </linearGradient>
@@ -149,73 +89,27 @@ const Testimonials = () => {
         </svg>
       </div>
       <div className="absolute bottom-5 left-0 z-[-1]">
-        <svg
-          width="279"
-          height="106"
-          viewBox="0 0 279 106"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="279" height="106" viewBox="0 0 279 106" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g opacity="0.5">
-            <path
-              d="M-57 12L50.0728 74.8548C55.5501 79.0219 70.8513 85.7589 88.2373 79.3692C109.97 71.3821 116.861 60.9642 156.615 63.7423C178.778 65.291 195.31 69.2985 205.911 62.3533C216.513 55.408 224.994 47.7682 243.016 49.1572C255.835 50.1453 265.278 50.8936 278 45.3373"
-              stroke="url(#paint0_linear_72:302)"
-            />
-            <path
-              d="M-57 1L50.0728 63.8548C55.5501 68.0219 70.8513 74.7589 88.2373 68.3692C109.97 60.3821 116.861 49.9642 156.615 52.7423C178.778 54.291 195.31 58.2985 205.911 51.3533C216.513 44.408 224.994 36.7682 243.016 38.1572C255.835 39.1453 265.278 39.8936 278 34.3373"
-              stroke="url(#paint1_linear_72:302)"
-            />
-            <path
-              d="M-57 23L50.0728 85.8548C55.5501 90.0219 70.8513 96.7589 88.2373 90.3692C109.97 82.3821 116.861 71.9642 156.615 74.7423C178.778 76.291 195.31 80.2985 205.911 73.3533C216.513 66.408 224.994 58.7682 243.016 60.1572C255.835 61.1453 265.278 61.8936 278 56.3373"
-              stroke="url(#paint2_linear_72:302)"
-            />
-            <path
-              d="M-57 35L50.0728 97.8548C55.5501 102.022 70.8513 108.759 88.2373 102.369C109.97 94.3821 116.861 83.9642 156.615 86.7423C178.778 88.291 195.31 92.2985 205.911 85.3533C216.513 78.408 224.994 70.7682 243.016 72.1572C255.835 73.1453 265.278 73.8936 278 68.3373"
-              stroke="url(#paint3_linear_72:302)"
-            />
+            <path d="M-57 12L50.0728 74.8548C55.5501 79.0219 70.8513 85.7589 88.2373 79.3692C109.97 71.3821 116.861 60.9642 156.615 63.7423C178.778 65.291 195.31 69.2985 205.911 62.3533C216.513 55.408 224.994 47.7682 243.016 49.1572C255.835 50.1453 265.278 50.8936 278 45.3373" stroke="url(#paint0_linear_72:302)" />
+            <path d="M-57 1L50.0728 63.8548C55.5501 68.0219 70.8513 74.7589 88.2373 68.3692C109.97 60.3821 116.861 49.9642 156.615 52.7423C178.778 54.291 195.31 58.2985 205.911 51.3533C216.513 44.408 224.994 36.7682 243.016 38.1572C255.835 39.1453 265.278 39.8936 278 34.3373" stroke="url(#paint1_linear_72:302)" />
+            <path d="M-57 23L50.0728 85.8548C55.5501 90.0219 70.8513 96.7589 88.2373 90.3692C109.97 82.3821 116.861 71.9642 156.615 74.7423C178.778 76.291 195.31 80.2985 205.911 73.3533C216.513 66.408 224.994 58.7682 243.016 60.1572C255.835 61.1453 265.278 61.8936 278 56.3373" stroke="url(#paint2_linear_72:302)" />
+            <path d="M-57 35L50.0728 97.8548C55.5501 102.022 70.8513 108.759 88.2373 102.369C109.97 94.3821 116.861 83.9642 156.615 86.7423C178.778 88.291 195.31 92.2985 205.911 85.3533C216.513 78.408 224.994 70.7682 243.016 72.1572C255.835 73.1453 265.278 73.8936 278 68.3373" stroke="url(#paint3_linear_72:302)" />
           </g>
           <defs>
-            <linearGradient
-              id="paint0_linear_72:302"
-              x1="256.267"
-              y1="53.6717"
-              x2="-40.8688"
-              y2="8.15715"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint0_linear_72:302" x1="256.267" y1="53.6717" x2="-40.8688" y2="8.15715" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
-            <linearGradient
-              id="paint1_linear_72:302"
-              x1="256.267"
-              y1="42.6717"
-              x2="-40.8688"
-              y2="-2.84285"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint1_linear_72:302" x1="256.267" y1="42.6717" x2="-40.8688" y2="-2.84285" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
-            <linearGradient
-              id="paint2_linear_72:302"
-              x1="256.267"
-              y1="64.6717"
-              x2="-40.8688"
-              y2="19.1572"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint2_linear_72:302" x1="256.267" y1="64.6717" x2="-40.8688" y2="19.1572" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>
-            <linearGradient
-              id="paint3_linear_72:302"
-              x1="256.267"
-              y1="76.6717"
-              x2="-40.8688"
-              y2="31.1572"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint3_linear_72:302" x1="256.267" y1="76.6717" x2="-40.8688" y2="31.1572" gradientUnits="userSpaceOnUse">
               <stop stopColor="#4A6CF7" stopOpacity="0" />
               <stop offset="1" stopColor="#4A6CF7" />
             </linearGradient>

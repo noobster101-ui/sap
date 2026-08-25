@@ -7,10 +7,15 @@ const starIcon = (
 );
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const { star, name, image, content, designation } = testimonial;
+  const { star, name, image, content, designation } = testimonial ?? ({} as Testimonial);
+  const safeStar = typeof star === "number" && star > 0 && star <= 5 ? star : 5;
+  const safeName = name || "Student";
+  const safeImage = image || "/images/testimonials/auth-01.png";
+  const safeContent = content || "";
+  const safeDesignation = designation || "SAP Learner";
 
   let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
+  for (let index = 0; index < safeStar; index++) {
     ratingIcons.push(
       <span key={index} className="text-yellow">
         {starIcon}
@@ -23,17 +28,17 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
       <div className="border-stroke shadow-two hover:shadow-one dark:border-dark-3 dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark rounded-sm border bg-white p-8 duration-300 lg:px-5 xl:px-8">
         <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div>
         <p className="border-body-color/10 mb-8 border-b pb-8 text-base leading-relaxed text-black dark:border-white/10 dark:text-white">
-          “{content}
+          “{safeContent}
         </p>
         <div className="flex items-center">
           <div className="relative mr-3 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill />
+            <Image src={safeImage} alt={safeName} fill />
           </div>
           <div className="w-full">
             <h3 className="mb-1 text-lg font-semibold text-black lg:text-base xl:text-lg dark:text-white">
-              {name}
+              {safeName}
             </h3>
-            <p className="text-sm text-black dark:text-white">{designation}</p>
+            <p className="text-sm text-black dark:text-white">{safeDesignation}</p>
           </div>
         </div>
       </div>

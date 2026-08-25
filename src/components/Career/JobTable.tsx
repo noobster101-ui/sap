@@ -11,7 +11,7 @@ interface JobTableProps {}
 
 const JobTable = (): React.ReactElement => {
   const { data: jobsData } = useSWR("/api/jobs", fetcher);
-  const jobs: JobOpening[] = jobsData || [];
+  const jobs: JobOpening[] = Array.isArray(jobsData) ? jobsData : [];
 
   return (
     <section className="dark:bg-gray-dark bg-gray-50 py-16 lg:py-24">
